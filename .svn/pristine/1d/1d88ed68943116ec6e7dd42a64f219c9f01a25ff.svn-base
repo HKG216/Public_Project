@@ -1,0 +1,181 @@
+﻿@model KMU.HisOrder.MVC.Areas.Reservation.ViewModels.PrintClass
+@using KMU.HisOrder.MVC.Extesion
+@using KMU.HisOrder.MVC.Models
+
+@{
+
+}
+<style>
+    .lb_4 {
+        position: relative;
+        width: 100%;
+        max-width: 33%;
+        flex: 0 0 33%;
+        margin-top: 0.25rem !important
+    }
+
+    .lb_6 {
+        position: relative;
+        width: 100%;
+        max-width: 50%;
+        flex: 0 0 50%;
+        margin-top: 0.25rem !important
+    }
+
+    .lb_8 {
+        position: relative;
+        width: 100%;
+        max-width: 66%;
+        flex: 0 0 66%;
+        margin-top: 0.25rem !important
+    }
+
+    .lb_12 {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-top: 0.25rem !important
+    }
+
+    .align-items-center {
+        align-items: center !important;
+    }
+
+    .justify-content-center {
+        justify-content: center !important;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .div_4 {
+        position: relative;
+        width: 100%;
+        max-width: 33%;
+        flex: 0 0 33%;
+        margin-top: 0.25rem !important
+    }
+
+    .div_6 {
+        position: relative;
+        width: 100%;
+        max-width: 49%;
+        flex: 0 0 49%;
+        margin-top: 0.25rem !important
+    }
+
+    .div_8 {
+        position: relative;
+        width: 100%;
+        max-width: 66%;
+        flex: 0 0 66%;
+        margin-top: 0.25rem !important
+    }
+
+    .div_12 {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-top: 0.25rem !important
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+</style>
+<div id="ReserveSheetPage" class="page">
+    <table class="PageContainerTable">
+        <thead>
+            @*<tr>
+            <td style="text-align:center;">
+            <h2 class="PageFormTitle">@Model.FormTitle</h2>
+            </td>
+            </tr>*@
+            <tr>
+                <td>
+                    <div class="header-space"></div>
+                </td>
+            </tr>
+        </thead>
+        <tbody style="vertical-align: top;">
+            <tr>
+                <td>
+                    <div class="PageContentRSheet">
+                        <div class="row my-0 justify-content-center" style="margin:0px 40px;padding:98px 0px 0px 0px">
+                            <div class="div_12">
+                                <div class="form-group row mx-0" style="margin-bottom: 10px;">
+                                    <label class="lb_4" style="font-size:16pt">Reserve Date:</label>
+                                    <label id="" class="lb_8" style="font-size:16pt">@Model.AppointmentSheet.reserveDate.Value.ToString("dd/MM/yyyy")</label>
+                                    <label class="lb_4" style="font-size:16pt">Department:</label>
+                                    <label id="" class="lb_8" style="font-size:16pt">
+                                        @(!string.IsNullOrEmpty(Model.AppointmentSheet.reserveDpt) ? Model.AppointmentSheet.reserveDptName + "(" + Model.AppointmentSheet.reserveDpt + ")" : "")
+                                    </label>
+                                    <label class="lb_4" style="font-size:16pt">Doctor:</label>
+                                    <label id="" class="lb_8" style="font-size:16pt">
+                                        @(!string.IsNullOrEmpty(Model.AppointmentSheet.reserveDoctor) ? Model.AppointmentSheet.reserveDoctorName + "(" + Model.AppointmentSheet.reserveDoctor + ")" : "")
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="div_6" style="height:150px;border: 1px solid #dee2e6!important;">
+                                <div class="form-group row mx-0" style="margin-bottom: 5px;">
+                                    <label class="lb_12 text-center" style="font-size:20pt">Clinic Room:</label>
+                                    <label class="lb_12 text-center" style="font-size:16pt">Qolka dhakhtarka:</label>
+                                    <label id="" class="lb_12 text-center" style="font-size:56pt">@(!string.IsNullOrEmpty(Model.AppointmentSheet.reserveRoom) ? Model.AppointmentSheet.reserveRoom : "")</label>
+                                </div>
+                            </div>
+                            <div class="div_6" style="height:150px;border: 1px solid #dee2e6!important;">
+                                <div class="form-group row mx-0" style="margin-bottom: 5px;">
+                                    <label class="lb_12 text-center" style="font-size:20pt">Query No    :</label>
+                                    <label class="lb_12 text-center" style="font-size:16pt">Lambarka kuyuu-ga:</label>
+                                    <label id="" class="lb_12 text-center" style="font-size:56pt">@(Model.AppointmentSheet.seqNo != null ? Model.AppointmentSheet.seqNo.Value.ToString() : "")</label>
+                                </div>
+                            </div>
+                            <div class="div_12">
+                                <div class="form-group row mx-0" style="margin-bottom: 5px;">
+                                    @if (Model.phySignItems.Any())
+                                    {
+                                        foreach (var phyItem in Model.phySignItems)
+                                        {
+                                            <label id="" class="lb_6" style="font-size:16pt">@Html.Raw(phyItem.PhyType+":"+phyItem.PhyValue)</label>
+                                        }
+                                        if (Model.AppointmentSheet.triageLevel != "0")
+                                        {
+                                            <label id="" class="lb_12 text-center" style="font-size:16pt;border:solid 1px black">☆☆☆Triage Level: @Html.Raw(Model.AppointmentSheet.triageLevel)</label>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        foreach (var phyTitle in Model.phySignTitle)
+                                        {
+                                            <div class="div_6" style="display:flex;margin:10px 0px">
+                                                <label id="" style="font-size:20pt">@Html.Raw(phyTitle.CodeName):</label>
+                                                <input type="text" style="width:100%;border:solid 2px black;margin:0px 5px" />
+                                            </div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                            @*                            <div class="div_12">
+                            <div class="form-group row mx-0" style="margin-bottom: 10px;">
+                            <label id="" class="lb_12" style="font-size:16pt">@Html.Raw(Model.AppointmentSheet.clinicRemark)</label>
+                            </div>
+                            </div>*@
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <div class="footer-space"></div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+@*<script src="~/lib/bootstrap-4.6.2-dist/js/bootstrap.bundle.js"></script>*@

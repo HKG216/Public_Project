@@ -1,0 +1,137 @@
+﻿@model KMU.HisOrder.MVC.Models.KmuMedicine
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewData["Title"] = "Edit";
+}
+<link href="~/css/style.css" rel="stylesheet" />
+<h2>&nbsp;&nbsp;&nbsp;Edit</h2>
+
+<h4>&nbsp;&nbsp;&nbsp;Medicine</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    <label asp-for="MedId" class="control-label"></label>
+                    <input asp-for="MedId" class="form-control" readonly="readonly" style="width:100px" />
+                    <span asp-validation-for="MedId" class="text-danger"></span>
+                </div>&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    <label asp-for="MedType" class="control-label"></label>
+                    <select asp-for="MedType" class="form-control" style="width:380px">
+                        <option value="1">Oral</option>
+                        <option value="2">Injection</option>
+                        <option value="3">External</option>
+                    </select>
+                    <span asp-validation-for="MedType" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    <label asp-for="GenericName" class="control-label"></label>
+                    <input asp-for="GenericName" class="form-control" required="" style="width:490px" />
+                    <span asp-validation-for="GenericName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    <label asp-for="BrandName" class="control-label"></label>
+                    <input asp-for="BrandName" class="form-control" required="" style="width:490px" />
+                    <span asp-validation-for="BrandName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="UnitSpec" class="control-label"></label>
+                    <input asp-for="UnitSpec" class="form-control" style="width:112px" />
+                    <span asp-validation-for="UnitSpec" class="text-danger"></span>
+                </div>&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="PackSpec" class="control-label"></label>
+                    <input asp-for="PackSpec" class="form-control" style="width:113px" />
+                    <span asp-validation-for="PackSpec" class="text-danger"></span>
+                </div>&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="DefaultFreq" class="control-label"></label>
+                    <input asp-for="DefaultFreq" class="form-control" style="width:112px" />
+                    <span asp-validation-for="DefaultFreq" class="text-danger"></span>
+                </div>&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="RefDuration" class="control-label"></label>
+                    <input asp-for="RefDuration" class="form-control" style="width:113px" />
+                    <span asp-validation-for="RefDuration" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="Remarks" class="control-label"></label>
+                    <input asp-for="Remarks" class="form-control" style="width:490px" />
+                    <span asp-validation-for="Remarks" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="StartDate" class="control-label"></label>
+                    <input asp-for="StartDate" class="form-control" />
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                </div>&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="EndDate" class="control-label"></label>
+                    <input asp-for="EndDate" class="form-control" />
+                    <span asp-validation-for="EndDate" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    @*<label asp-for="Status" class="control-label"></label>*@
+                    @Html.Label("Off/On")
+                    <select asp-for="Status" class="form-control" required="" style="width:390px">
+                        <option value="1">True</option>
+                        <option value="2">False</option>
+                    </select>
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="CreateUser" class="control-label"></label>
+                    <input asp-for="CreateUser" class="form-control" readonly="readonly" style="width:100px" />
+                    <span asp-validation-for="CreateUser" class="text-danger"></span>
+                </div>
+            </div>
+            @*            <div class="form-group">
+            <label asp-for="ModifyUser" class="control-label"></label>
+            <input asp-for="ModifyUser" class="form-control" readonly="readonly" />
+            <span asp-validation-for="ModifyUser" class="text-danger"></span>
+            </div>*@
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-default" />&nbsp;&nbsp;&nbsp;<a asp-action="Index">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

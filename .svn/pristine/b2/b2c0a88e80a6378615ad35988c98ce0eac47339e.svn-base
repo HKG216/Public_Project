@@ -1,0 +1,93 @@
+﻿
+<div id="MedicalCategoryList" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="margin-left:5%;">
+        <!-- Modal content-->
+        <div class="modal-content" style="width:90vw;">
+            <div class="modal-header" style="padding:5px 10px;">
+                <h5 class="modal-title" style="font-weight:bold;">Add Item</h5>
+                <button type="button" class="close" data-dismiss="modal" style="font-size:30px;">&times;</button>
+            </div>
+            <div class="modal-body" style="padding-top:0px;">
+                <div class="x_content col-md-12" style="margin-top:0px; padding-top:0px;">
+                    <div class="col-lg-8">
+                        <ul class="nav nav-tabs bar_tabs col-md-6 MenuTabs" id="nav-tab" role="tablist" style="padding:0px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="nav-ICD-tab" data-search="ICDSearch" data-toggle="tab" href="#nav-ICD" role="tab" aria-controls="nav-ICD" aria-selected="true">ICD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="nav-Med-tab" data-search="MedSearch" data-toggle="tab" href="#nav-Med" role="tab" aria-controls="nav-Med" aria-selected="false">Med</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="nav-NonMed-tab" data-search="NonMedSearch" data-toggle="tab" href="#nav-NonMed" role="tab" aria-controls="nav-NonMed" aria-selected="false">NonMed</a>
+                            </li>
+                        </ul>
+                        <ul class="nav bar_tabs col-md-6" style="padding:0px;">
+                            <li id="SearchGroups" style="width:100%; border:none; background-color:transparent;">
+                                <div id="ICDSearch" class="top_search" style="width:100%;">
+                                    <div class="input-group">
+                                        <input type="text" id="ICDMenuSearch" style="height:auto;" class="form-control" placeholder="Search for...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-secondary" type="button"><i class="fa-solid fa-magnifying-glass" style="color:white;"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div id="MedSearch" class="top_search" style="width:100%; display:none;">
+                                    <div class="input-group">
+                                        <input type="text" id="MedMenuSearch" style="height:auto;" class="form-control" placeholder="Search for...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-secondary" type="button"><i class="fa-solid fa-magnifying-glass" style="color:white;"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div id="NonMedSearch" class="top_search" style="width:100%; display:none;">
+                                    <div class="input-group">
+                                        <input type="text" id="NonMedMenuSearch" style="height:auto;" class="form-control" placeholder="Search for...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-secondary" type="button"><i class="fa-solid fa-magnifying-glass" style="color:white;"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-ICD" role="tabpanel" aria-labelledby="nav-ICD-tab">
+                                <div id="ICD"></div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-Med" role="tabpanel" aria-labelledby="nav-Med-tab">
+                                <div id="Med"></div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-NonMed" role="tabpanel" aria-labelledby="nav-NonMed-tab">
+                                <div id="NonMed"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" style="padding-left:0px;">
+                        <div class="row" style="justify-content:right; margin:3px;">
+                            <div class="col-md-6" style="padding-bottom:0px;">
+                                <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-secondary MenuBtn">Quit</button>
+                            </div>
+                            <div class="col-md-6" style="padding-bottom:0px;">
+                                <button type="button" onclick="BringBackOrder()" class="btn btn-primary MenuBtn">Save</button>
+                            </div>
+                        </div>
+                        <div id="BringOrderColumn" class="TabMenuColumn" style="margin-left:5px; background-color:#f6faff; overflow:auto;">
+                            <div class="row">
+                                <table id="BringOrderTable" class="table table-striped jambo_table">
+                                    <thead>
+                                        <tr>
+                                            <th><a href="#" class="RemoveBtn" onclick="ClearItem()">&times;</button></th>
+                                            <th>Code</th>
+                                            <th>Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

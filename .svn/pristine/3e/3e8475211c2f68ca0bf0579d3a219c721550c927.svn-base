@@ -1,0 +1,121 @@
+﻿@using KMU.HisOrder.MVC.Extesion;
+@model IEnumerable<KMU.HisOrder.MVC.Models.KmuIcd>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+           @* <th></th>*@
+@*            <th>
+                @Html.DisplayNameFor(model => model.MedId)
+            </th>*@
+            <th>
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.IcdCode)*@
+                ICD10
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.IcdEnglishName)*@
+                Name
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dhis2Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParentCode)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Status)*@
+                Off/On
+
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.IcdType)*@
+                Type
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.ShowMode)*@
+                ShowMode
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Versioncode)*@
+                Version
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifyUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifyDate)
+            </th>
+            <th>
+                ICD10 Undot
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td width="80px">
+                    &nbsp&nbsp<a asp-action="Edit" asp-route-id="@item.IcdCode" class="fa-solid fa-pencil"></a>&nbsp
+                    <a asp-action="Delete" asp-route-id="@item.IcdCode" class="fa-solid fa-trash"></a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IcdCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IcdEnglishName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dhis2Code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ParentCode)
+                </td>
+                <td>
+                    @*                @if (item.Status == "1")
+                {
+                @Html.Label("True")
+                }
+                else
+                {
+                @Html.Label("False")
+                }*@
+
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="@item.IcdCode" name="@item.IcdCode" @(item.Status =="1" ?" checked":"") onclick="fn_Status('@item.IcdCode')">
+                        <label for="@item.IcdCode" class="custom-control-label"></label>
+                    </div>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IcdType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShowMode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Versioncode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModifyUser)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModifyDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IcdCodeUndot)
+                </td>
+                <td>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+ 
+

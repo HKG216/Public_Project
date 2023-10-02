@@ -1,0 +1,139 @@
+﻿@model IEnumerable<KmuCoderef>
+
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+@if( TempData["Show_User_Messages"] != null)
+{
+<table align="center">
+				<tr>
+								<td>
+	<h2>
+		<center>
+			<div class="alert alert-primary" role="alert">
+			@TempData["Show_User_Messages"]
+			</div>
+		</center>
+	</h2>
+								</td>
+				</tr>
+</table>
+}
+
+<form method="post" asp-area="" asp-controller="Login" asp-action="DoAddAccount">
+<table align="center">
+				<tr>
+								<td>
+<h1 class="text-center">Create New Account</h1>
+
+	<div class="form-group row mx-0 ">
+            <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>Account ID:</label>
+            <input type="text" name="Account" class="form-control col-lg-4 font-weight-bold text-center rounded" placeholder="Account ID" required="" maxlength="@ViewBag.AccountIDmaxlength" />
+			@*<label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit">Up to @ViewBag.AccountIDmaxlength characters</label>*@
+	</div>
+	
+	<div class="form-group row mx-0 ">
+            <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>First Name:</label>
+            <input type="text" name="Firstname" class="form-control col-lg-4 font-weight-bold text-center rounded" placeholder="First Name" required="" />
+			<label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"></label>
+	</div>
+	
+	<div class="form-group row mx-0 ">
+            <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>Mid Name:</label>
+            <input type="text" name="MidName" class="form-control col-lg-4 font-weight-bold text-center rounded" placeholder="Mid Name" required="" />
+			<label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"></label>
+	</div>
+	
+	<div class="form-group row mx-0 ">
+            <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>Last Name:</label>
+            <input type="text" name="LastName" class="form-control col-lg-4 font-weight-bold text-center rounded" placeholder="Last Name" required="" />
+			<label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"></label>
+	</div>
+	
+	<div class="form-group row mx-0 ">
+            <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>Mobile Phone Number:</label>
+            <input type="password" name="MobilePhone" class="form-control col-lg-4 font-weight-bold text-center rounded" placeholder="Mobile Phone Number" required="" minlength="@ViewBag.MobilePhoneNumberminlength" />
+			@*<label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit">at least @ViewBag.MobilePhoneNumberminlength number</label>*@
+	</div>
+	
+	<div class="form-group row mx-0 ">
+            <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>Mobile Phone Number Again:</label>
+            <input type="password" name="MobilePhone2" class="form-control col-lg-4 font-weight-bold text-center rounded" placeholder="Mobile Phone Number Again" required="" minlength="@ViewBag.MobilePhoneNumberminlength"/>
+			<label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"></label>
+	</div>
+	
+	<div class="form-group row mx-0 ">
+            <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>Category:</label>
+			<label class="form-control col-lg-8 font-weight-bold border-0 px-0" style="background-color:inherit">
+			@foreach (var obj_one in Model)
+            {
+				<input type="radio" id="Category@(obj_one.RefCode)" name="Category" value="@obj_one.RefCode" required="">
+				<label for="Category@(obj_one.RefCode)">@(obj_one.RefName)</label>
+            }
+			</label>
+	</div>
+	
+	<div class="row justify-content-center">
+	<button type="submit" class="btn btn-primary">Create New Account </button>	
+	</div>
+
+<h2>
+	<span><span style="color:#FF0000">Rule：</span><br>Account ID : Up to @ViewBag.AccountIDmaxlength characters<br>Mobile Phone Number : at least @ViewBag.MobilePhoneNumberminlength number</span>
+									<br><br><span style="color:#FF0000">Notice</span> :  <br>The <span style="color:#FF0000">mobile number</span> will be the <span style="color:#FF0000">default password</span>, and the user needs to change the password when <span style="color:#FF0000">logging in for the first time</span>.
+</h2>
+								</td>
+				</tr>
+</table>
+</form>
+
+@*
+<div class="login_wrapper">
+            <div class="animate form login_form">
+                <section class="login_content">
+                    <form method="post" asp-area="" asp-controller="Login" asp-action="DoAddAccount">
+                        <h1>Create New Account</h1>
+						
+						<div>
+                            <input type="text" name="Account" class="form-control" placeholder="Account ID" required="" />
+                        </div>
+						
+						<div>
+                            <input type="text" name="FirstName" class="form-control" placeholder="First Name" required="" />
+                        </div>
+						
+						<div>
+                            <input type="text" name="MidName" class="form-control" placeholder="Mid Name" required="" />
+                        </div>
+						
+						<div>
+                            <input type="text" name="LastName" class="form-control" placeholder="Last Name" required="" />
+                        </div>
+						
+                        <div>
+                            <input type="password" name="MobilePhone" class="form-control" placeholder="Mobile Phone Number" required="" />
+                        </div>
+						<div>
+                            <input type="password" name="MobilePhone2" class="form-control" placeholder="Mobile Phone Number Again" required="" />
+                        </div>
+                        <div>
+                            
+                            <button type="submit" class="btn btn-block btn-primary">Create New Account </button>						
+						
+							<h2>
+								<center>
+									<span style="color:#FF0000">Notice</span> :  The <span style="color:#FF0000">mobile number</span> will be the <span style="color:#FF0000">default password</span>, and the user needs to change the password when <span style="color:#FF0000">logging in for the first time</span>.
+								</center>
+							</h2>
+						
+                        </div>
+						
+						
+
+                     
+                    </form>
+                </section>
+            </div>
+</div>
+
+*@

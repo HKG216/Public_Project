@@ -1,0 +1,26 @@
+{
+  "ConnectionStrings": {
+    // SQL Server
+    //"DefaultConnection": "U2VydmVyPTE3Mi4xOC4xOC42NVxcU09NQUxJTEFORCwxNDMzO0RhdGFiYXNlPUtNVTsgVXNlciBJRD1oaXN1c2VyO1Bhc3N3b3JkPUttdWhAJF47Q29ubmVjdCBUaW1lb3V0PTMwO0VuY3J5cHQ9RmFsc2U7VHJ1c3RTZXJ2ZXJDZXJ0aWZpY2F0ZT1GYWxzZTtBcHBsaWNhdGlvbkludGVudD1SZWFkV3JpdGU7TXVsdGlTdWJuZXRGYWlsb3Zlcj1GYWxzZQ=="
+
+    // Windows Server PostgreSQL
+    //"DefaultConnection": "U2VydmVyPTE3Mi4xOC4xOC42NTtEYXRhYmFzZT1LTVU7UG9ydD01NDMyO1VzZXIgSUQ9aGlzdXNlcjtQYXNzd29yZD1LbXVoQCRe"
+
+    // Linux PostgreSQL
+    "DefaultConnection": "U2VydmVyPTE3Mi4xOC4xOC43ODtEYXRhYmFzZT1LTVU7UG9ydD01NDMyO1VzZXIgSUQ9aGlzdXNlcjtQYXNzd29yZD1LbXVoQCRe"
+
+
+  },
+  "WebsiteSettings":{
+	  "HtmlTitle": "HIS SYSTEM" //網頁標題列文字
+      ,"SystemTitle": "計畫名稱：索馬利蘭醫療資訊管理效能提升計畫"//Somaliland Health Information System (HIS)  //網頁上方橫幅顯示文字
+  },
+  "https_port": 443,
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

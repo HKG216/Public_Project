@@ -1,0 +1,259 @@
+﻿@{
+    ViewBag.Title = "TW-SOL HIS";//KMU HIS System
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en" style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@(ViewBag.Title) Login </title>
+
+    <!-- Bootstrap -->
+    <link href="~/lib/bootstrap-4.6.2-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+
+    <!-- NProgress -->
+    <link href="~/lib/nprogress/nprogress.min.css" rel="stylesheet" />
+    <!-- Animate.css -->
+    <link href="~/lib/animate.css/animate.min.css" rel="stylesheet" />
+
+    <!-- Custom Theme Style -->
+    <link href="~/css/custom.css" rel="stylesheet" />
+
+    <style>
+
+        #ui-header {
+            font-family: "Segoe UI";
+        }
+
+        #somaflag_index {
+            width: 389px;
+            height: 260px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="login row mx-0 justify-content-end" style="background-color:#EDF9E1;background-image:url(images/Cover.jpg);background-size: 100vw">
+    @*<img src="~/images/CoverIcon.png" style="position:fixed;top:600px;left:1150px;width:15vw" />*@
+    <div class="align-self-end" style="width:25vw;height:8vh;position:relative;left:-20rem;top:-10rem;">
+
+	 @if (TempData["User_Login_Fail"] != null)
+	{
+		<div class="alert alert-danger" role="alert">
+			@TempData["User_Login_Fail"]
+		</div>
+	}
+
+        <form method="post" asp-area="" asp-controller="Login" asp-action="doLogin">
+            <div class="form-group row mx-0 ">
+                <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>Username:</label>
+                <input type="text" name="username" class="form-control col-lg-8 font-weight-bold text-center rounded" placeholder="Username" required="" />
+            </div>
+            <div class="form-group row mx-0 ">
+                <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>Password:</label>
+                <input type="password" name="password" class="form-control col-lg-8 font-weight-bold text-center rounded" placeholder="Password" required="" />
+            </div>
+            <div class="form-group row mx-0 ">
+                <button type="submit" class="btn btn-block btn-primary">Log in </button>
+            </div>
+            <div class="form-group row mx-0 justify-content-center">
+                <a class="reset_pass" asp-controller="Login" asp-action="forgot_password" style="color:white">Forgot your password?</a>
+            </div>
+        </form>
+    </div>
+    <img src="~/images/CoverIcon.png" class="align-self-end" style="width:15vw;height:8vh" />
+
+    @*<div class="col-lg-8">
+    <img src="~/images/Cover.jpg" class="img-fluid" />
+    </div>
+    <div class="col-lg-4">
+    <div class="row mx-1 justify-content-end mb-5" style="height:120px">
+    <img src="~/images/CoverIcon.png" style="max-width:100%;height:inherit" />
+    </div>
+    @if (TempData["User_Login_Fail"] != null)
+    {
+    <div class="alert alert-danger" role="alert">
+    @TempData["User_Login_Fail"]
+    </div>
+    }
+    <div class="row font-weight-bold mx-1">
+    <h2 class="col-lg-12" style="font-size:2rem!important">Sign In<br /> Use Your His Account</h2>
+    <div class="col-lg-12">
+    <form method="post" asp-area="" asp-controller="Login" asp-action="doLogin">
+    <div class="form-group row mx-0 ">
+    <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>Username:</label>
+    <input type="text" name="username" class="form-control col-lg-8 font-weight-bold text-center rounded" placeholder="Username" required="" />
+    </div>
+    <div class="form-group row mx-0 ">
+    <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>Password:</label>
+    <input type="password" name="password" class="form-control col-lg-8 font-weight-bold text-center rounded" placeholder="Password" required="" />
+    </div>
+    <div class="form-group row mx-0 ">
+    <button type="submit" class="btn btn-block btn-primary">Log in </button>
+    </div>
+    </form>
+    <center>
+    <a class="reset_pass" asp-controller="Login" asp-action="forgot_password">Forgot your password?</a>
+    </center>
+    </div>
+    </div>
+    </div>*@
+
+    @*    <div>
+    <a class="hiddenanchor" id="signup"></a>
+    <table align="center">
+    <tr>
+    <td>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/640px-Flag_of_the_Republic_of_China.svg.png" width="389" height="260" />
+    </td>
+    <td width="40">&nbsp;</td>
+    <td>
+    <div id="somaflag_index">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Flag_of_Somaliland.svg/640px-Flag_of_Somaliland.svg.png" height="260" style="margin-left:-65.5px;" /><!--與我國國旗相同尺吋為width="389"--><!--依照比例尺吋為「width="520"」建議設計師之後可恢復成原比例尺寸，以「高」作為對其依據，平均刪減左右兩側-->
+    </div>
+    </td>
+    </tr>
+    <tr>
+    <td style="text-align: center;">Republic of China (Taiwan)</td>
+    <td width="40">&nbsp;</td>
+    <td style="text-align: center;">Republic of Somaliland (索馬利蘭)</td>
+    </tr>
+    @if (TempData["User_Login_Fail"] != null)
+    {
+    <tr>
+    <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+    <td colspan="3">
+    <div class="alert alert-primary" role="alert">
+    @TempData["User_Login_Fail"]
+    </div>
+    </td>
+    </tr>
+    }
+    <tr>
+    <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+    <td colspan="3">
+    <h1 class="text-center">Login @(ViewBag.Title)</h1>
+
+    <form method="post" asp-area="" asp-controller="Login" asp-action="doLogin">
+    <div class="form-group row">
+    <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>Username:</label>
+    <input type="text" name="username" class="form-control col-lg-8 font-weight-bold text-center rounded" placeholder="Username" required="" />
+    </div>
+    <div class="form-group row">
+    <label class="form-control col-lg-4 font-weight-bold border-0 px-0" style="background-color:inherit"><font color="red">*</font>Password:</label>
+    <input type="password" name="password" class="form-control col-lg-8 font-weight-bold text-center rounded" placeholder="Password" required="" />
+    </div>
+    <div class="form-group row">
+    <button type="submit" class="btn btn-block btn-primary">Log in </button>
+    </div>
+    </form>
+    </td>
+    </tr>
+    </table>
+    <center>
+    <a class="reset_pass" asp-controller="Login" asp-action="forgot_password">Forgot your password?</a>
+    </center>
+    @*
+    <a class="hiddenanchor" id="signin"></a>
+
+    <div class="login_wrapper">
+    <div class="animate form login_form">
+    <section class="login_content">
+    <form method="post" asp-area="" asp-controller="Login" asp-action="doLogin">
+    <h1>Login Form</h1>
+    <div class="form-group row">
+    <label for="inputUsername" class="col-sm-4 col-form-label">Username<span style="color:#FF0000;"><b>*</b></span></label>
+    <div class="col-sm-8">
+    <input type="text" name="username" class="form-control" placeholder="Username" id="inputUsername" required="" />
+    </div>
+    </div>
+    <div class="form-group row">
+    <label for="inputPassword" class="col-sm-4 col-form-label">Password<span style="color:#FF0000;"><b>*</b></span></label>
+    <div class="col-sm-8">
+    <input type="password" name="password" class="form-control" placeholder="Password" id="inputPassword" required="" />
+    </div>
+    </div>
+    <div>
+    <!--<a class="btn btn-default submit" href="index.html">Log in</a>-->
+    <button type="submit" class="btn btn-block btn-primary">Log in </button>
+    <a class="reset_pass" asp-controller="Login" asp-action="forgot_password">Forgot your password?</a>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="separator">
+    <p class="change_link">
+    New to site?
+    <a href="#signup" class="to_register"> Create Account </a>
+    </p>
+
+    <div class="clearfix"></div>
+    <br />
+
+    <div>
+    <h1 id="ui-header"><i class="fa-solid fa-house"></i>  @(ViewBag.Title)</h1>
+    <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+    </div>
+    </div>
+    </form>
+    </section>
+    </div>
+
+    <div id="register" class="animate form registration_form">
+    <section class="login_content">
+    <form>
+    <h1>Create Account</h1>
+    <div>
+    <input type="text" class="form-control" placeholder="Username" required="" />
+    </div>
+    <div>
+    <input type="email" class="form-control" placeholder="Email" required="" />
+    </div>
+    <div>
+    <input type="password" class="form-control" placeholder="Password" required="" />
+    </div>
+    <div>
+    <a class="btn btn-default submit" href="index.html">Submit</a>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="separator">
+    <p class="change_link">
+    Already a member ?
+    <a href="#signin" class="to_register"> Log in </a>
+    </p>
+
+    <div class="clearfix"></div>
+    <br />
+
+    <div>
+    <h1 id="ui-header"><i class="fa-solid fa-house"></i>KMU Medical System !</h1>
+    <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+    </div>
+    </div>
+    </form>
+    </section>
+    </div>
+    </div>
+    </div>
+
+    </div>*@
+
+</body>
+</html>
+
+

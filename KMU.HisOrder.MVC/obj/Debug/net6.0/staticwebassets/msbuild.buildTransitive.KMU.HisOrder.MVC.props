@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\KMU.HisOrder.MVC.props" />
+</Project>

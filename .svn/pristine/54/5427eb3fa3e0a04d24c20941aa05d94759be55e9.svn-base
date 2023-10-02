@@ -1,0 +1,84 @@
+﻿@model IEnumerable<KMU.HisOrder.MVC.Models.KmuMedfrequency>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+
+    //Layout = null;
+
+    ViewData["Title"] = "Medicines Frequency";
+}
+
+   <!-- jQuery -->
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="/lib/bootstrap-4.6.2-dist/js/bootstrap.bundle.js"></script>
+    <!-- FastClick -->
+    <script src="/lib/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/lib/nprogress/nprogress.js"></script>
+    <!-- jQuery custom content scroller -->
+    <script src="/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- iCheck -->
+    <script src="/lib/iCheck/icheck.js"></script>
+    <!-- Layer -->
+    <script src="/lib/layer/layer.js"></script>
+    <!-- Daterangepicker -->
+    <script src="/lib/bootstrap-daterangepicker/moment.min.js"></script>
+    <script src="/lib/bootstrap-daterangepicker/daterangepicker.min.js"></script>
+    <!-- DataTables -->
+    <script type="text/javascript" language="javascript" src="/lib/datatables.net/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/lib/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <!--jQueryUI-->
+    <script src="/lib/jqueryui/jquery-ui.min.js"></script>
+
+<link href="~/css/style.css" rel="stylesheet" />
+<h4>&nbsp;&nbsp;&nbsp;Medicines Frequency</h4>
+<table width="100%">
+    <tr>
+        <td>
+
+        </td>
+        <td>
+            <a asp-action="Create" class="btn btn-default">Create New</a>
+        </td>
+    </tr>
+</table>
+ 
+<div>
+@Html.Partial("Search", Model)
+</div>
+
+<span id="loading" style="display:none;"><h4>loading...</h4></span>
+
+<script type="text/javascript">
+    
+        function fn_Status(inCode) {
+        var checked = $('input[name="' + inCode + '"]').is(':checked')
+        
+
+        let postData = {
+            inFrqCode: inCode
+        };
+        $.post('@Url.Action("UpdateStatus", "KmuMedfrequency")', postData, null);
+
+    }
+
+</script>
+
+@*<style>
+
+    $('.openBtn').on('click',function(){
+        $('.modal-body').load('getContent.php?id=2',function(){
+            $('#myModal').modal({show:true});
+        });});
+
+    
+    
+</style>*@
+
+
+
+
+
+

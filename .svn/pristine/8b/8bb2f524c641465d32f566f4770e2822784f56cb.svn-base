@@ -1,0 +1,94 @@
+﻿@model IEnumerable<KMU.HisOrder.MVC.Models.KmuNonMedicine>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                
+                ItemID
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.ItemName)*@
+                Name
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.ItemType)*@
+                Ttype
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.ItemSpec)*@
+                Spec
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Status)*@
+                Off/On
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifyUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifyDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td width="80px">
+                    &nbsp&nbsp<a asp-action="Edit" asp-route-id="@item.ItemId" class="fa-solid fa-pencil"></a>
+                    &nbsp&nbsp<a asp-action="Delete" asp-route-id="@item.ItemId" class="fa-solid fa-trash"></a>
+                </td>               
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemSpec)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                    <td>
+                        <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="@item.ItemId" name="@item.ItemId" @(item.Status =='1' ?" checked":"") onclick="fn_Status('@item.ItemId')">
+                        <label for="@item.ItemId" class="custom-control-label"></label>
+                    </div>
+                    </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateUser)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModifyUser)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModifyDate)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

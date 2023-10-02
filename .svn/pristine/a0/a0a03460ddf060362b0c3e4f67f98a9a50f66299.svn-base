@@ -1,0 +1,303 @@
+﻿using System.ComponentModel;
+
+namespace KMU.HisOrder.MVC.Models
+{
+    public class EnumClass
+    {
+        /// <summary>
+        /// 性別
+        /// </summary>
+        public enum EnumGender
+        {
+            /// <summary>
+            /// 男性
+            /// </summary>
+            [Description("M")]
+            Male,
+
+            /// <summary>
+            /// 女性
+            /// </summary>
+            [Description("F")]
+            Female,
+        }
+
+        public enum EnumNoon
+        {
+            /// <summary>
+            /// 
+            /// </summary>
+            [Description("AM")]
+            AM,
+            ///// <summary>
+            ///// 
+            ///// </summary>
+            //[Description("PM")]
+            //PM,
+            ///// <summary>
+            ///// 
+            ///// </summary>
+            //[Description("Night")]
+            //Night,
+        }
+        public enum EnumAnonymous
+        {
+            /// <summary>
+            /// 有證件
+            /// </summary>
+            [Description("0")]
+            Normal,
+
+            /// <summary>
+            /// 無證件男性成人
+            /// </summary>
+            [Description("1")]
+            MaleAdult,
+
+            /// <summary>
+            /// 無證件女性成人
+            /// </summary>
+            [Description("2")]
+            FemaleAdult,
+
+            /// <summary>
+            /// 無證件男性小孩
+            /// </summary>
+            [Description("3")]
+            MaleKid,
+
+            /// <summary>
+            /// 無證件女性小孩
+            /// </summary>
+            [Description("4")]
+            FemaleKid,
+
+
+            /// <summary>
+            /// 測試用病歷號
+            /// </summary>
+            [Description("Z")]
+            TestingUse,
+        }
+
+
+        #region 相關錯誤訊息
+
+        public enum ReplyNoCode
+        {
+            /// <summary>
+            /// 正確的資料
+            /// </summary>
+            ReplyOK = 0,
+
+            /// <summary>
+            /// 查無病歷
+            /// </summary>
+            ChartNotExist = 1,
+
+            /// <summary>
+            /// 證件號碼已經存在於病歷主檔
+            /// </summary>
+            ExistingPatientID = 2,
+
+            /// <summary>
+            /// 輸入空白的姓名
+            /// </summary>
+            EmptyName = 3,
+
+            /// <summary>
+            /// 錯誤的出生日期
+            /// </summary>
+            WrongOrEmptyBirthDate = 4,
+
+            /// <summary>
+            /// 錯誤的性別
+            /// </summary>
+            EmptySex = 5,
+
+            /// <summary>
+            /// 空白的手機號碼
+            /// </summary>
+            EmptyPhoneNumber = 6,
+
+            /// <summary>
+            /// 錯誤的病歷號格式
+            /// </summary>
+            WrongPatientIDFormat = 7,
+
+            /// <summary>
+            /// 病歷號碼已存在
+            /// </summary>
+            AlreadyExistMedicalRecord = 8,
+
+            /// <summary>
+            /// 不符合年齡限制
+            /// </summary>
+            NotAllowedAge = 9,
+
+            /// <summary>
+            /// 掛號今天以前的日期
+            /// </summary>
+            ReserveBeforeToday = 10,
+
+            /// <summary>
+            /// 錯誤的診間資訊
+            /// </summary>
+            WrongDept = 11,
+
+            /// <summary>
+            /// 錯誤的身分
+            /// </summary>
+            WrongAttt = 12,
+
+            /// <summary>
+            /// 當日查無該診間號
+            /// </summary>
+            NoScheduleToday = 13,
+
+            /// <summary>
+            /// 當日門診休診
+            /// </summary>
+            DayOff = 14,
+
+            /// <summary>
+            /// 號碼重複
+            /// </summary>
+            OccupiedSeqNo = 15,
+
+            /// <summary>
+            /// 查無掛號資料
+            /// </summary>
+            NoReserveData = 16,
+
+            /// <summary>
+            /// 已完成看診不可取消
+            /// </summary>
+            DoneAlready = 17,
+
+            /// <summary>
+            /// 已取消掛號
+            /// </summary>
+            CancelAlready = 17,
+
+            /// <summary>
+            /// 錯誤的使用者代碼 找不到
+            /// </summary>
+            InvalidModifyID = 71,
+
+            /// <summary>
+            /// 使用者已離職的錯誤
+            /// </summary>
+            ExpiredModifyID = 72,
+
+            /// <summary>
+            /// 查無資料
+            /// </summary>
+            EmptyData = 97,
+
+            /// <summary>
+            /// 空白的參數
+            /// </summary>
+            EmptyParam = 98,
+
+            /// <summary>
+            /// 錯誤的參數
+            /// </summary>
+            WrongParam = 99,
+
+            /// <summary>
+            /// 系統發生錯誤
+            /// 
+            /// </summary>
+            SystemError = 100,
+        }
+
+        #endregion
+
+        #region 
+
+        public enum DisplayLanguage
+        {
+            /// <summary>
+            /// 中文
+            /// </summary>
+            [Description("zh-TW")]
+            Chinese,
+
+            /// <summary>
+            /// 英文
+            /// </summary>
+            [Description("en-US")]
+            English,
+
+            /// <summary>
+            /// 未知
+            /// </summary>
+            [Description("")]
+            Unkmow,
+        }
+
+        public enum ActionCode
+        {
+            /// <summary>
+            /// 
+            /// </summary>
+            [Description("I")]
+            Create,
+
+            /// <summary>
+            /// 
+            /// </summary>
+            [Description("U")]
+            Update,
+
+            /// <summary>
+            /// 
+            /// </summary>
+            [Description("D")]
+            Delete,
+        }
+
+        public enum OpenFlag
+        {
+            /// <summary>
+            /// 
+            /// </summary>
+            [Description("Y")]
+            On,
+
+            /// <summary>
+            /// 
+            /// </summary>
+            [Description("N")]
+            Off,
+        }
+
+        public enum EnumStatus
+        {
+            /// <summary>
+            /// 未看診
+            /// </summary>
+            [Description("N")]
+            None,
+
+            /// <summary>
+            /// 暫存
+            /// </summary>
+            [Description("T")]
+            TempSave,
+
+            /// <summary>
+            /// 完成看診
+            /// </summary>
+            [Description("*")]
+            Done
+
+        }
+
+        #endregion
+    }
+
+
+
+}

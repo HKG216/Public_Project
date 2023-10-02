@@ -1,0 +1,45 @@
+﻿using KMU.HisOrder.MVC.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Data;
+using static KMU.HisOrder.MVC.Models.EnumClass;
+
+namespace KMU.HisOrder.MVC.Areas.Reservation.Conrollers
+{
+    [Area("Reservation")]
+    [Authorize(Roles = "Reservation")]//登入後可依據設定的 專案名稱 project_id 作為判斷依據
+    public class ReserveController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Reserve(string reserveType)
+        {
+            List<EnumAnonymous> anonymousList = new List<EnumAnonymous>();
+
+            foreach (EnumClass.EnumAnonymous anonymous in Enum.GetValues(typeof(EnumAnonymous)))
+            {
+                if (EnumClass.EnumAnonymous.Normal != anonymous)
+                {
+                    anonymousList.Add(anonymous);
+                }
+            }
+
+            ViewData["reserveType"] = reserveType;
+            ViewData["anonymousList"] = anonymousList;
+
+            if(reserveType == "OPD")
+            {
+                ViewData["Title"] = "Appointment";
+            }
+            else if (reserveType == "EMG")
+            {
+                ViewData["Title"] = "Emergency";
+            }
+            
+            return View();
+        }
+    }
+}

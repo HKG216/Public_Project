@@ -1,0 +1,93 @@
+﻿@model IEnumerable<KMU.HisOrder.MVC.Models.KmuMedfrequency>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                
+            </th>
+            <th>
+               @* @Html.DisplayNameFor(model => model.FrqCode)*@
+               Code
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.FreqDesc)*@
+                Desc
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.FrqForDays)*@
+                For Day
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.FrqForTimes)*@
+                For Times
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.FrqOneDayTimes)*@
+                One Day Times
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.EnableStatus)*@
+                    Off/On
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.CreateUser)*@
+                Create User
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.ModifyUser)*@
+                Modify User
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td width="80px">
+                    &nbsp&nbsp<a asp-action="Edit" asp-route-id="@item.FrqCode" class="fa-solid fa-pencil"></a>
+                    &nbsp&nbsp<a asp-action="Delete" asp-route-id="@item.FrqCode" class="fa-solid fa-trash"></a>
+                    </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FrqCode)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.FreqDesc)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.FrqForDays)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.FrqForTimes)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.FrqOneDayTimes)
+                </td>
+                <td>
+                <td>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="@item.FrqCode" name="@item.FrqCode" @(item.EnableStatus =='1' ?" checked":"") onclick="fn_Status('@item.FrqCode')">
+                        <label for="@item.FrqCode" class="custom-control-label"></label>
+                    </div>
+                </td>
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.CreateUser)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.ModifyUser)
+                </td>
+                <td>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
+

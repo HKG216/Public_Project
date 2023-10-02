@@ -1,0 +1,147 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+	html {
+		font-size: 15px;
+	}
+
+	h1 {
+		font-size: 1.8rem;
+	}
+
+	table {
+		font-size: 1rem;
+		min-width: 40vw;
+	}
+
+	label {
+		background-color: inherit !important;
+		font-weight: bold !important;
+		border: 0px !important;
+		white-space: nowrap !important;
+	}
+
+	input {
+		/*font-weight: bold !important;*/
+		text-align: center;
+		border-radius: 50rem !important;
+	}
+</style>
+
+@if( TempData["Show_User_Messages"] != null)
+{
+	<table align="center">
+		<tr>
+			<td>
+				<h2>
+					<center>
+						<div class="alert alert-primary" role="alert">
+						@TempData["Show_User_Messages"]
+						</div>
+					</center>
+				</h2>
+			</td>
+		</tr>
+	</table>
+}
+
+<form method="post" asp-area="" asp-controller="Login" asp-action="DoChangeMobilePhone">
+<table align="center">
+	<tr>
+		<td>
+			<h1 class="text-center"><i class="fa-solid fa-phone"></i> Change Your Mobile Phone</h1><hr class="mb-4"></hr>
+
+			<div class="form-group row mx-0 mb-1">
+					<label class="form-control col-lg-5 px-0"><font color="red">*</font>Phone Number:</label>
+					<input type="password" name="MobilePhone" class="form-control col-lg-7" placeholder="Phone Number" required="" />
+			</div>
+	
+			<div class="form-group row mx-0 mb-1">
+					<label class="form-control col-lg-5 px-0"><font color="red">*</font>New Phone Number:</label>
+					<input type="password" name="NewMobilePhone" class="form-control col-lg-7" placeholder="New Phone Number" required="" minlength="@ViewBag.MobilePhoneNumberminlength" />
+			</div>
+	
+			<div class="form-group row mx-0 mb-1">
+					<label class="form-control col-lg-5 px-0"><font color="red">*</font>New Phone Number Again:</label>
+					<input type="password" name="NewMobilePhone2" class="form-control col-lg-7" placeholder="New Phone Number Again" required="" minlength="@ViewBag.MobilePhoneNumberminlength"/>
+			</div>
+	
+			@*
+			<div class="form-group row mx-0 ">
+					<label class="form-control col-lg-4 px-0"><font color="red">*</font>Mobile Phone Number:</label>
+					<input type="password" name="MobilePhone" class="form-control col-lg-4" placeholder="Mobile Phone Number" required="" />
+					<label class="form-control col-lg-4 px-0"></label>
+			</div>
+	
+			<div class="form-group row mx-0 ">
+					<label class="form-control col-lg-4 px-0"><font color="red">*</font>New Mobile Phone Number:</label>
+					<input type="password" name="NewMobilePhone" class="form-control col-lg-4" placeholder="New Mobile Phone Number" required="" minlength="@ViewBag.MobilePhoneNumberminlength" />
+					<label class="form-control col-lg-4 px-0">at least @ViewBag.MobilePhoneNumberminlength number</label>
+			</div>
+	
+			<div class="form-group row mx-0 ">
+					<label class="form-control col-lg-4 px-0"><font color="red">*</font>New Mobile Phone Number Again:</label>
+					<input type="password" name="NewMobilePhone2" class="form-control col-lg-4" placeholder="New Mobile Phone Number Again" required="" minlength="@ViewBag.MobilePhoneNumberminlength"/>
+					<label class="form-control col-lg-4 px-0"></label>
+			</div>
+			*@
+
+			<div class="form-group row mx-0 mb-1">
+				<span class="col-lg-5 px-0"></span>
+				<button type="submit" class="btn btn-primary col-lg-7 rounded-pill">Reset Mobile Phone</button>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="pt-3">
+			<span class="text-danger"><i class="fa-solid fa-triangle-exclamation"></i> Notice</span> :
+			<div class="pl-2">
+					New Mobile Phone Number at least @ViewBag.MobilePhoneNumberminlength number<br>The mobile number will be used as a <span class="text-danger">reset condition when the password is forgotten</span>.
+			</div>
+		</td>
+	</tr>
+</table>
+</form>
+
+@*
+<div class="login_wrapper">
+            <div class="animate form login_form">
+                <section class="login_content">
+                    <form method="post" asp-area="" asp-controller="Login" asp-action="DoChangeMobilePhone">
+                        <h1>Change Your Mobile Phone</h1>
+						
+						
+						
+						<div>
+                            <input type="password" name="MobilePhone" class="form-control" placeholder="Mobile Phone" required="" />
+                        </div>
+                        <div>
+                            <input type="password" name="NewMobilePhone" class="form-control" placeholder="New Mobile Phone" required="" />
+                        </div>
+						<div>
+                            <input type="password" name="NewMobilePhone2" class="form-control" placeholder="New Mobile Phone Again" required="" />
+                        </div>
+                        <div>
+                            <!--<a class="btn btn-default submit" href="index.html">Log in</a>-->
+                            <button type="submit" class="btn btn-block btn-primary">Reset Mobile Phone </button>						
+						
+							<h2>
+								<center>
+									<span style="color:#FF0000">Notice</span> : The mobile number will be used as a <span style="color:#FF0000">reset condition when the password is forgotten</span>.
+								</center>
+							</h2>
+						
+                        </div>
+						
+						
+
+                     
+                    </form>
+                </section>
+            </div>
+</div>
+
+
+*@

@@ -1,0 +1,84 @@
+﻿@model KMU.HisOrder.MVC.Areas.HisOrder.ViewModels.PrintClass
+@using KMU.HisOrder.MVC.Models
+
+@{
+    Model.FormTitle = "Prescription";
+    List<Hisorderplan> MedOrder = Model.OrderData.Where(c => c.HplanType == "Med").ToList();
+    var MedBagOrder = new List<Hisorderplan>();
+}
+
+<div id="PrescriptionPage" class="page">
+    <table class="PageContainerTable">
+        <thead>
+            <tr>
+                <td style="text-align:center;">
+                    <h2 class="PageFormTitle">@Model.FormTitle</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="header-space"></div>
+                </td>
+            </tr>
+        </thead>
+        <tbody style="vertical-align: top;">
+            <tr>
+                <td>
+                    <div class="PageContent">
+                        @if (MedOrder.Count() > 0)
+                        {
+                            @for (int i = 0; i < MedOrder.GroupBy(c => c.MedBag).Count(); i++)
+                            {
+                                <h4 style="font-style:italic;">※ Med Bag. @(i + 1)</h4>
+                                <table id="MedDetailTable" class="DetailContentTable">
+                                    <thead>
+                                        <tr style="text-decoration:underline;">
+                                            <th></th>
+                                            <th>DrugName</th>
+                                            <th>SgDose</th>
+                                            <th>Unit</th>
+                                            <th>Path</th>
+                                            <th>Freq</th>
+                                            <th>Ind</th>
+                                            <th>DDose</th>
+                                            <th>Days</th>
+                                            <th>TDose</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="vertical-align:top;">
+                                        @{
+                                            MedBagOrder = MedOrder.Where(c => c.MedBag == i + 1).ToList();
+                                        }
+                                        @for (int j = 0; j < MedBagOrder.Count(); j++)
+                                        {
+                                            <tr>
+                                                <td style="width:20px; max-width:20px">@(j + 1).</td>
+                                                <td style="width:135px; max-width:135px; white-space:normal;">@MedBagOrder[j].PlanDes</td>
+                                                <td>@MedBagOrder[j].QtyDose</td>
+                                                <td>@MedBagOrder[j].UnitDose</td>
+                                                <td>@MedBagOrder[j].DosePath</td>
+                                                <td>@MedBagOrder[j].FreqCode</td>
+                                                <td>@MedBagOrder[j].DoseIndication</td>
+                                                <td>@MedBagOrder[j].QtyDaily</td>
+                                                <td>@MedBagOrder[j].PlanDays</td>
+                                                <td>@MedBagOrder[j].TotalQty</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                <hr style="border-style:dashed; border-color:#ccc;"></hr>
+                            }
+                        }
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <div class="footer-space"></div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

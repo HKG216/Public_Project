@@ -1,0 +1,132 @@
+﻿@model IEnumerable<KMU.HisOrder.MVC.Models.KmuIcd>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+
+    //Layout = null;
+
+    ViewData["Title"] = "ICD";
+}
+
+   <!-- jQuery -->
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="/lib/bootstrap-4.6.2-dist/js/bootstrap.bundle.js"></script>
+    <!-- FastClick -->
+    <script src="/lib/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/lib/nprogress/nprogress.js"></script>
+    <!-- jQuery custom content scroller -->
+    <script src="/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- iCheck -->
+    <script src="/lib/iCheck/icheck.js"></script>
+    <!-- Layer -->
+    <script src="/lib/layer/layer.js"></script>
+    <!-- Daterangepicker -->
+    <script src="/lib/bootstrap-daterangepicker/moment.min.js"></script>
+    <script src="/lib/bootstrap-daterangepicker/daterangepicker.min.js"></script>
+    <!-- DataTables -->
+    <script type="text/javascript" language="javascript" src="/lib/datatables.net/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/lib/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <!--jQueryUI-->
+    <script src="/lib/jqueryui/jquery-ui.min.js"></script>
+
+<link href="~/css/style.css" rel="stylesheet" />
+<h4>&nbsp;&nbsp;&nbsp;Medicines</h4>
+<table width="100%">
+    <tr>
+        <td>
+            <div class="col-lg-0 border-right">
+                <label class="form-control col-lg-1 border-0 font-weight-bold text-center ">ICD10</label>
+                <select id="IcdCode" name="IcdCode" class="form-control col-lg-1 font-weight-bold text-left">
+                    <option value="A">A</option>
+                    <option value="B,C,D">B~D</option>
+                    <option value="E,F,G">E~G</option>
+                    <option value="H">H</option>
+                    <option value="I,J,K,L">I~L</option>
+                    <option value="M0,M1,M2,M3">M0~M3</option>
+                    <option value="M4,M5,M6,M7">M4~M7</option>
+                    <option value="M8,M9">M8~M9</option>
+                    <option value="N,O,P,Q,R">N~R</option>
+                    <option value="S0">S0</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                    <option value="S3">S3</option>
+                    <option value="S4">S4</option>
+                    <option value="S5">S5</option>
+                    <option value="S6">S6</option>
+                    <option value="S7">S7</option>
+                    <option value="S8">S8</option>
+                    <option value="S9">S9</option>
+                    <option value="T0,T2">T0~T2</option>
+                    <option value="T3,T4">T3~T4</option>
+                    <option value="T5,T6">T5~T6</option>
+                    <option value="T7,T8">T7~T8</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W,X">W~X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+            </select>
+            </div>
+            <div class="col-lg-0 border-right">
+                <label class="form-control col-lg-1 border-0 font-weight-bold text-center ">Name</label>
+                <input type="text" id="EnglishName" name="EnglishName" class="form-control col-lg-2 rounded py-0 text-left" />
+            </div>
+            <div class="col-lg-0 border-right">
+                &nbsp;<button type="button" id="btn_Search" name="btn_Search" class="btn btn-primary">Search</button>
+            </div>
+        </td>
+        <td>
+            <a asp-action="Create" class="btn btn-default">Create New</a>
+        </td>
+    </tr>
+</table>
+ 
+<div>
+@Html.Partial("Search", Model)
+</div>
+
+<span id="loading" style="display:none;"><h4>loading...</h4></span>
+
+<script type="text/javascript">
+    $('button').click(() => {
+        $('.table').empty().html($('#loading').html());
+
+        let postData = {
+            IcdCode: $('#IcdCode').val(),
+            EnglishName: $('#EnglishName').val(),
+        };
+
+        $.post('@Url.Action("Search", "KmuIcd")', postData, (html) => $('.table').html(html));
+    });
+
+    function fn_Status(inIcdCode)
+    {
+        var checked = $('input[name="' + inIcdCode + '"]').is(':checked')
+ 
+        let postData = {
+            inIcdCode: inIcdCode
+        };
+        $.post('@Url.Action("UpdateStatus", "KmuIcd")', postData , null);
+
+    }
+</script>
+
+@*<style>
+
+    $('.openBtn').on('click',function(){
+        $('.modal-body').load('getContent.php?id=2',function(){
+            $('#myModal').modal({show:true});
+        });});
+
+    
+    
+</style>*@
+
+
+
+
+
+

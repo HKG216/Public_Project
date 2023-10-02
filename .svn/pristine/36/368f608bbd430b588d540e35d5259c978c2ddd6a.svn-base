@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace KMU.HisOrder.MVC.Models
+{
+    public partial class KmuIcd
+    {
+        public string IcdCode { get; set; }
+        public string IcdEnglishName { get; set; }
+        public string IcdCodeUndot { get; set; }
+        public string ParentCode { get; set; }
+        public string Status { get; set; }
+        public string IcdType { get; set; }
+        public string ShowMode { get; set; }
+        public string Versioncode { get; set; }
+        public string ModifyUser { get; set; }
+        public DateTime ModifyDate { get; set; }
+        public int? Dhis2Code { get; set; }
+    }
+}

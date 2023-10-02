@@ -1,0 +1,80 @@
+﻿@model IEnumerable<KMU.HisOrder.MVC.Models.KmuNonMedicine>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewData["Title"] = "NonMedicines";
+}
+
+   <!-- jQuery -->
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="/lib/bootstrap-4.6.2-dist/js/bootstrap.bundle.js"></script>
+    <!-- FastClick -->
+    <script src="/lib/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/lib/nprogress/nprogress.js"></script>
+    <!-- jQuery custom content scroller -->
+    <script src="/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- iCheck -->
+    <script src="/lib/iCheck/icheck.js"></script>
+    <!-- Layer -->
+    <script src="/lib/layer/layer.js"></script>
+    <!-- Daterangepicker -->
+    <script src="/lib/bootstrap-daterangepicker/moment.min.js"></script>
+    <script src="/lib/bootstrap-daterangepicker/daterangepicker.min.js"></script>
+    <!-- DataTables -->
+    <script type="text/javascript" language="javascript" src="/lib/datatables.net/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/lib/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <!--jQueryUI-->
+    <script src="/lib/jqueryui/jquery-ui.min.js"></script>
+
+<link href="~/css/style.css" rel="stylesheet" />
+
+<h4>&nbsp;&nbsp;&nbsp;NonMedicines</h4>
+<table width="100%">
+    <tr>
+        <td>
+            <div class="col-lg-0 border-right">
+                <label class="form-control col-lg-1 border-0 font-weight-bold text-center ">Name</label>
+                <input type="text" id="ItemName" name="ItemName" class="form-control col-lg-2 rounded py-0 text-left" />
+            </div>
+            <div class="col-lg-0 border-right">
+                &nbsp;<button type="button" id="btn_Search" name="btn_Search" class="btn btn-primary">Search</button>
+            </div>
+        </td>
+        <td>
+            <a asp-action="Create" class="btn btn-default">Create New</a>
+        </td>
+    </tr>
+</table>
+
+
+<div>
+    @Html.Partial("Search", Model)
+</div>
+
+<span id="loading" style="display:none;"><h4>loading...</h4></span>
+
+<script type="text/javascript">
+    $('button').click(() => {
+        $('.table').empty().html($('#loading').html());
+
+        let postData = {
+            ItemName: $('#ItemName').val()
+        };
+
+        $.post('@Url.Action("Search", "KmuNonMedicines")', postData, (html) => $('.table').html(html));
+    });
+
+    function fn_Status(inItemId) {
+        var checked = $('input[name="' + inItemId + '"]').is(':checked')
+        
+
+        let postData = {
+            inItemId: inItemId
+        };
+        $.post('@Url.Action("UpdateStatus", "KmuNonMedicines")', postData, null);
+
+    }
+</script>

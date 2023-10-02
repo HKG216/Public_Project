@@ -1,0 +1,22 @@
+{
+  "ConnectionStrings": {
+    // SQL Server
+    //"DefaultConnection": "Server=172.18.18.65\\SOMALILAND,1433;Database=KMU; User ID=hisuser;Password=Kmuh@$^;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+
+    // Windows Server PostgreSQL
+    //"DefaultConnection": "Server=172.18.18.65;Database=KMU;Port=5432;User ID=hisuser;Password=Kmuh@$^;"
+
+    // Linux PostgreSQL
+    "DefaultConnection": "Server=172.18.18.78;Database=KMU;Port=5432;User ID=hisuser;Password=Kmuh@$^;"
+
+
+  },
+  "https_port": 443,
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

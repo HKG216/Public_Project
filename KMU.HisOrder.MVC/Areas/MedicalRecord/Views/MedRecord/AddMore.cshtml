@@ -1,0 +1,11 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@model KMU.HisOrder.MVC.Models.KmuCoderef
+@{
+    Layout = null;
+}
+<div>
+    <form asp-action="AddAddress" asp-controller="MedRecord" method="post">
+      <input asp-for="RefName" class="form-control"/>
+      <input class="btn btn-primary  mt-2" type="submit" value="Add"/>
+  </form>
+</div>

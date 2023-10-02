@@ -1,0 +1,496 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = KMU.HisOrder.MVC
+build_property.RootNamespace = KMU.HisOrder.MVC
+build_property.ProjectDir = C:\Users\ASUS\Documents\KMU\last version\KMU.HisOrder(SourceCode Ver 20230713)\KMU.HisOrder(SourceCode)\KMU.HisOrder.MVC\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ASUS\Documents\KMU\last version\KMU.HisOrder(SourceCode Ver 20230713)\KMU.HisOrder(SourceCode)\KMU.HisOrder.MVC
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisCalling/Views/Call/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzQ2FsbGluZ1xWaWV3c1xDYWxsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisCalling/Views/Call/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzQ2FsbGluZ1xWaWV3c1xDYWxsXFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/HisOrder/ClinicOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSGlzT3JkZXJcQ2xpbmljT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/HisOrder/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSGlzT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/HisOrder/PartialViews/_AllergyPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSGlzT3JkZXJcUGFydGlhbFZpZXdzXF9BbGxlcmd5UGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/HisOrder/PartialViews/_ClinicInfoPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSGlzT3JkZXJcUGFydGlhbFZpZXdzXF9DbGluaWNJbmZvUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/HisOrder/PartialViews/_DiagnosisPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSGlzT3JkZXJcUGFydGlhbFZpZXdzXF9EaWFnbm9zaXNQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/HisOrder/PartialViews/_HistoryRecordMasterPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSGlzT3JkZXJcUGFydGlhbFZpZXdzXF9IaXN0b3J5UmVjb3JkTWFzdGVyUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/HisOrder/PartialViews/_HistoryRecordPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSGlzT3JkZXJcUGFydGlhbFZpZXdzXF9IaXN0b3J5UmVjb3JkUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/HisOrder/PartialViews/_InputHelperPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSGlzT3JkZXJcUGFydGlhbFZpZXdzXF9JbnB1dEhlbHBlclBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/HisOrder/PartialViews/_MedicinePartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSGlzT3JkZXJcUGFydGlhbFZpZXdzXF9NZWRpY2luZVBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/HisOrder/PartialViews/_NonMedPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSGlzT3JkZXJcUGFydGlhbFZpZXdzXF9Ob25NZWRQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/HisOrder/PartialViews/_SoapPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSGlzT3JkZXJcUGFydGlhbFZpZXdzXF9Tb2FwUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/HisOrder/PartialViews/_SwitchClinicPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSGlzT3JkZXJcUGFydGlhbFZpZXdzXF9Td2l0Y2hDbGluaWNQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/InputHelper/ICD/_ICDMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSW5wdXRIZWxwZXJcSUNEXF9JQ0RNZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/InputHelper/ICD/_v_NodeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSW5wdXRIZWxwZXJcSUNEXF92X05vZGVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/InputHelper/Med/_MedMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSW5wdXRIZWxwZXJcTWVkXF9NZWRNZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/InputHelper/NonMed/_NonMedMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcSW5wdXRIZWxwZXJcTm9uTWVkXF9Ob25NZWRNZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Print/PartialViews/_Examination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUHJpbnRcUGFydGlhbFZpZXdzXF9FeGFtaW5hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Print/PartialViews/_Laboratory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUHJpbnRcUGFydGlhbFZpZXdzXF9MYWJvcmF0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Print/PartialViews/_LaboratoryER.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUHJpbnRcUGFydGlhbFZpZXdzXF9MYWJvcmF0b3J5RVIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Print/PartialViews/_MedicalRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUHJpbnRcUGFydGlhbFZpZXdzXF9NZWRpY2FsUmVjb3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Print/PartialViews/_Pathology.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUHJpbnRcUGFydGlhbFZpZXdzXF9QYXRob2xvZ3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Print/PartialViews/_Prescription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUHJpbnRcUGFydGlhbFZpZXdzXF9QcmVzY3JpcHRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Print/PartialViews/_Supply.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUHJpbnRcUGFydGlhbFZpZXdzXF9TdXBwbHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Print/PartialViews/_v_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUHJpbnRcUGFydGlhbFZpZXdzXF92X0Zvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Print/PartialViews/_v_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUHJpbnRcUGFydGlhbFZpZXdzXF92X0hlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Print/_PrintMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUHJpbnRcX1ByaW50TWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Print/_PrintTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUHJpbnRcX1ByaW50VGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Registrations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUmVnaXN0cmF0aW9uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/Views/Registrations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcVmlld3NcUmVnaXN0cmF0aW9uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/HisOrder/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSGlzT3JkZXJcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/CallingSettings/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcQ2FsbGluZ1NldHRpbmdzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/CallingSettings/CreateRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcQ2FsbGluZ1NldHRpbmdzXENyZWF0ZVJvb20uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/CallingSettings/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcQ2FsbGluZ1NldHRpbmdzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/CallingSettings/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcQ2FsbGluZ1NldHRpbmdzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/CallingSettings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcQ2FsbGluZ1NldHRpbmdzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/CallingSettings/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcQ2FsbGluZ1NldHRpbmdzXFNlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/ClinicSchedule/ClinicSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcQ2xpbmljU2NoZWR1bGVcQ2xpbmljU2NoZWR1bGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/ClinicSchedule/PartialViews/_ScheduleDataPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcQ2xpbmljU2NoZWR1bGVcUGFydGlhbFZpZXdzXF9TY2hlZHVsZURhdGFQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/ClinicSchedule/PartialViews/_ScheduleModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcQ2xpbmljU2NoZWR1bGVcUGFydGlhbFZpZXdzXF9TY2hlZHVsZU1vZGVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuDepartments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211RGVwYXJ0bWVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuDepartments/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211RGVwYXJ0bWVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuDepartments/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211RGVwYXJ0bWVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuDepartments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211RGVwYXJ0bWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuDepartments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211RGVwYXJ0bWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuIcd/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211SWNkXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuIcd/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211SWNkXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuIcd/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211SWNkXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuIcd/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211SWNkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuIcd/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211SWNkXFNlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuMedfrequency/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211TWVkZnJlcXVlbmN5XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuMedfrequency/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211TWVkZnJlcXVlbmN5XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuMedfrequency/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211TWVkZnJlcXVlbmN5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuMedfrequency/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211TWVkZnJlcXVlbmN5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuMedfrequency/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211TWVkZnJlcXVlbmN5XFNlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuMedicines/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211TWVkaWNpbmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuMedicines/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211TWVkaWNpbmVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuMedicines/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211TWVkaWNpbmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuMedicines/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211TWVkaWNpbmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuMedicines/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211TWVkaWNpbmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuMedicines/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211TWVkaWNpbmVzXFNlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuNonMedicines/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211Tm9uTWVkaWNpbmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuNonMedicines/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211Tm9uTWVkaWNpbmVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuNonMedicines/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211Tm9uTWVkaWNpbmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuNonMedicines/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211Tm9uTWVkaWNpbmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuNonMedicines/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211Tm9uTWVkaWNpbmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/KmuNonMedicines/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcS211Tm9uTWVkaWNpbmVzXFNlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/Views/Report/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcVmlld3NcUmVwb3J0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Maintenance/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpbnRlbmFuY2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/MedicalRecord/Views/MedRecord/AddMore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVkaWNhbFJlY29yZFxWaWV3c1xNZWRSZWNvcmRcQWRkTW9yZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/MedicalRecord/Views/MedRecord/MRFind.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVkaWNhbFJlY29yZFxWaWV3c1xNZWRSZWNvcmRcTVJGaW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/MedicalRecord/Views/MedRecord/MRIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVkaWNhbFJlY29yZFxWaWV3c1xNZWRSZWNvcmRcTVJJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/MedicalRecord/Views/MedRecord/PartialViews/_PatientDataPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVkaWNhbFJlY29yZFxWaWV3c1xNZWRSZWNvcmRcUGFydGlhbFZpZXdzXF9QYXRpZW50RGF0YVBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/MedicalRecord/Views/MedRecord/PartialViews/_ReserveHistoryPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVkaWNhbFJlY29yZFxWaWV3c1xNZWRSZWNvcmRcUGFydGlhbFZpZXdzXF9SZXNlcnZlSGlzdG9yeVBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/MedicalRecord/Views/Print/PartialViews/_PersonalCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVkaWNhbFJlY29yZFxWaWV3c1xQcmludFxQYXJ0aWFsVmlld3NcX1BlcnNvbmFsQ2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/MedicalRecord/Views/Print/PartialViews/_v_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVkaWNhbFJlY29yZFxWaWV3c1xQcmludFxQYXJ0aWFsVmlld3NcX3ZfRm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/MedicalRecord/Views/Print/PartialViews/_v_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVkaWNhbFJlY29yZFxWaWV3c1xQcmludFxQYXJ0aWFsVmlld3NcX3ZfSGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/MedicalRecord/Views/Print/_PrintTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVkaWNhbFJlY29yZFxWaWV3c1xQcmludFxfUHJpbnRUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Reservation/Views/Print/PartialViews/_ReserveSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzZXJ2YXRpb25cVmlld3NcUHJpbnRcUGFydGlhbFZpZXdzXF9SZXNlcnZlU2hlZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Reservation/Views/Print/PartialViews/_v_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzZXJ2YXRpb25cVmlld3NcUHJpbnRcUGFydGlhbFZpZXdzXF92X0Zvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Reservation/Views/Print/PartialViews/_v_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzZXJ2YXRpb25cVmlld3NcUHJpbnRcUGFydGlhbFZpZXdzXF92X0hlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Reservation/Views/Print/_PrintTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzZXJ2YXRpb25cVmlld3NcUHJpbnRcX1ByaW50VGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Reservation/Views/Reserve/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzZXJ2YXRpb25cVmlld3NcUmVzZXJ2ZVxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Reservation/Views/Reserve/PartialViews/_PatientDataPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzZXJ2YXRpb25cVmlld3NcUmVzZXJ2ZVxQYXJ0aWFsVmlld3NcX1BhdGllbnREYXRhUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Reservation/Views/Reserve/PartialViews/_PhysicalSignPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzZXJ2YXRpb25cVmlld3NcUmVzZXJ2ZVxQYXJ0aWFsVmlld3NcX1BoeXNpY2FsU2lnblBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Reservation/Views/Reserve/PartialViews/_ReserveHistoryPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzZXJ2YXRpb25cVmlld3NcUmVzZXJ2ZVxQYXJ0aWFsVmlld3NcX1Jlc2VydmVIaXN0b3J5UGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Reservation/Views/Reserve/PartialViews/_ReservePartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzZXJ2YXRpb25cVmlld3NcUmVzZXJ2ZVxQYXJ0aWFsVmlld3NcX1Jlc2VydmVQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Reservation/Views/Reserve/Reserve.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzZXJ2YXRpb25cVmlld3NcUmVzZXJ2ZVxSZXNlcnZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Statistic/Views/Daily/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGlzdGljXFZpZXdzXERhaWx5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Statistic/Views/DHIS2/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGlzdGljXFZpZXdzXERISVMyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Statistic/Views/Monthly/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGlzdGljXFZpZXdzXE1vbnRobHlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Statistic/Views/Report/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGlzdGljXFZpZXdzXFJlcG9ydFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Statistic/Views/Report/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGlzdGljXFZpZXdzXFJlcG9ydFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Statistic/Views/Report/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGlzdGljXFZpZXdzXFJlcG9ydFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Statistic/Views/Report/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGlzdGljXFZpZXdzXFJlcG9ydFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Areas/Statistic/Views/Report/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGlzdGljXFZpZXdzXFJlcG9ydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Home/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Login/AES256.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQUVTMjU2LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Login/ChangeMobilePhone.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ2hhbmdlTW9iaWxlUGhvbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Login/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Login/EditAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRWRpdEFjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Login/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Login/NewAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTmV3QWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Login/ShowAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cU2hvd0FjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Login/UserAuthSetting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cVXNlckF1dGhTZXR0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Login/UserList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cVXNlckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Login/version_histoy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cdmVyc2lvbl9oaXN0b3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Shared/ErrorPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Shared/_BackAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CYWNrQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Shared/_PrintLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QcmludExheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/KMU/last version/KMU.HisOrder(SourceCode Ver 20230713)/KMU.HisOrder(SourceCode)/KMU.HisOrder.MVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-iz5k7txvgb

@@ -1,0 +1,133 @@
+﻿@model List<KMU.HisOrder.MVC.Areas.HisOrder.Models.hisordersoa_version>
+
+@{
+    var sourcetype = ViewData["SourceType"].ToString();
+
+    var Patientdto = (KMU.HisOrder.MVC.Areas.HisOrder.Models.PatientDTO)ViewData["PatientDTO"];
+
+}
+
+
+<div class="col-lg-12 pt-1 pl-0 pr-0 pb-0">
+
+    <div class=" col-lg-6 p-0 pr-2">
+        <div class="soap-section  card bd-callout bd-callout-master " style="height: calc(100vh - 355px); background-color: #eee ">
+            <div class="test1" style="height: 100%">
+                <div class="card-title pt-1 pr-1 pl-1 ">
+                    <h6>Clinic Remarks</h6>
+                    @{
+                        if (sourcetype == "EMG")
+                        {
+                            <span class="ml-2 d-inline-flex">
+
+                                <span class="input-group mb-1">
+                                    <select class="version-select custom-select custom-select-sm">
+
+                                        @if (Model != null && Model.Count() > 0)
+                                        {
+                                            int MaxVer = Model.Max(c => c.VersionCode);
+
+                                            foreach (var obj in Model)
+                                            {
+                                                if (obj.VersionCode == MaxVer)
+                                                {
+                                                    <option value="@obj.VersionCode" selected>@obj.Des</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@obj.VersionCode">@obj.Des</option>
+                                                }
+                                            }
+
+                                        }
+                                        else
+                                        {
+
+                                        }
+                                    </select>
+                                    <span class=" ml-1">
+
+                                        @if (Model != null && Model.Count() > 0)
+                                        {
+                                            <button class="btn btn-sm btn-dark delete_soap"><i class="fa fas fas fa-trash"></i></button>
+                                            <button class="btn btn-sm  btn-primary add_soap"><i class="fa fas fa-plus"></i></button>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn btn-sm btn-dark delete_soap" style="display:none;"><i class="fa fas fas fa-trash"></i></button>
+                                            <button class="btn btn-sm  btn-primary add_soap" style="display:none;"><i class="fa fas fa-plus"></i></button>
+                                        }
+                                    </span>
+                                </span>
+
+                            </span>
+                        }
+                    }
+                </div>
+                <div id="editor_clinic_remarks" data-soaid="" data-version-code="">
+                </div>
+            </div>
+        </div>
+
+        <div class="card bd-callout bd-callout-master mt-0 " style="height: 150px; background-color: #eee; /*#DBFEF7;*/ ">
+            @{
+                Html.RenderPartial("~/Areas/HisOrder/Views/HisOrder/PartialViews/_DiagnosisPartialView.cshtml");
+            }
+        </div>
+    </div>
+
+    <div class=" col-lg-6 p-0 pl-2">
+        <div class="soap-section  card bd-callout bd-callout-master  " style="height: calc(100vh - 195px); background-color: #eee ">
+            <div class="test2" style="height: 100%">
+                <div class="card-title pt-1 pr-1 pl-1">
+                    <h6>Management</h6>
+                </div>
+                <div class="cke_chrome mb-1 p-1 pr-0 pl-0">
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+
+                            @{
+                                if (Patientdto != null && !string.IsNullOrWhiteSpace(Patientdto.transfer_code))
+                                {
+                                    <input type="checkbox" id="checkbox_transfer" checked="checked" class=" check form-check-input"><span class=" ml-2 align-text-top">Transfer</span>
+                                }
+                                else
+                                {
+                                    <input type="checkbox" id="checkbox_transfer" class=" check form-check-input"><span class=" ml-2 align-text-top">Transfer</span>
+                                }
+                            }
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline mr-0" style="width: calc(100% - 107px)">
+                        @{
+                            if (Patientdto != null && !string.IsNullOrWhiteSpace(Patientdto.transfer_code))
+                            {
+                                <input type="text" id="transfer_des" class="form-control form-control-sm" placeholder="Description..." value=@Patientdto.transfer_des>
+                            }
+                            else
+                            {
+                                <input type="text" id="transfer_des" class="form-control form-control-sm" readonly="readonly" placeholder="Description..." value=@Patientdto.transfer_des>
+                            }
+                        }
+
+                    </div>
+                </div>
+                <div id="editor_managment" data-soaid="" data-version-code="">
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+@*<span class="section mt-2 mb-2" style="border-bottom: 1px solid #D3D3D3 "></span>*@
+
+

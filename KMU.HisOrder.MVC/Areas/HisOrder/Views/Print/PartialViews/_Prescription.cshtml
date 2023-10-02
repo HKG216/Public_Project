@@ -1,0 +1,135 @@
+﻿@model KMU.HisOrder.MVC.Areas.HisOrder.ViewModels.PrintClass
+@using KMU.HisOrder.MVC.Models
+
+@{
+    Model.FormTitle = "Prescription Pharmacy (Parmasii)";
+    List<Hisorderplan> MedOrder = Model.OrderData.Where(c => c.HplanType == "Med").ToList();
+    //var MedBagOrder = new List<Hisorderplan>();
+}
+
+<div id="PrescriptionPage" class="page">
+    <table class="PageContainerTable">
+        <thead>
+            <tr>
+                <td class="PageFormTitleTd">
+                    <h2 class="PageFormTitle">@Model.FormTitle</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="header-space"></div>
+                </td>
+            </tr>
+        </thead>
+        <tbody style="vertical-align: top;">
+            <tr>
+                <td>
+                    <div class="PageContent">
+                        <!-- 區分藥袋列印 -->
+                        @*            @if (MedOrder.Count() > 0)
+                        {
+                        @for (int i = 0; i < MedOrder.GroupBy(c => c.MedBag).Count(); i++)
+                        {
+                        <h4 style="font-style:italic;">※ Med Bag. @(i + 1)</h4>
+                        <table id="MedDetailTable" class="DetailContentTable">
+                        <thead>
+                        <tr style="text-decoration:underline;">
+                        <th></th>
+                        <th>Medication</th>
+                        <!--<th>SingleDose</th>-->
+                        <th>Unit</th>
+                        <th>Route</th>
+                        <th>Freq.</th>
+                        <!--<th>Indic.</th>-->
+                        <!--<th>DailyDose</th>-->
+                        <th>Days</th>
+                        <th>Qty.</th>
+                        </tr>
+                        </thead>
+                        <tbody style="vertical-align:top;">
+                        @{
+                        MedBagOrder = MedOrder.Where(c => c.MedBag == i + 1).ToList();
+                        }
+                        @for (int j = 0; j < MedBagOrder.Count(); j++)
+                        {
+                        <tr>
+                        <td style="width:20px; max-width:20px">@(j + 1).</td>
+                        <td style="width:135px; max-width:135px; white-space:normal;">@MedBagOrder[j].PlanDes</td>
+                        <td>@MedBagOrder[j].QtyDose</td>
+                        <td style="max-width: 80px; white-space: normal;">@MedBagOrder[j].UnitDose</td>
+                        <td style="width: 135px; max-width: 135px; white-space: normal;">@MedBagOrder[j].DosePath</td>
+                        <td>@MedBagOrder[j].FreqCode</td>
+                        <!--<td>@MedBagOrder[j].DoseIndication</td>-->
+                        <!--<td>@MedBagOrder[j].QtyDaily</td>-->
+                        <td>@MedBagOrder[j].PlanDays</td>
+                        <td>@MedBagOrder[j].TotalQty</td>
+                        </tr>
+                        }
+                        </tbody>
+                        </table>
+                        <hr style="border-style:dashed; border-color:#ccc;"></hr>
+                        }
+                        }*@
+
+                        <!-- 不分藥袋列印 -->
+                        <table id="MedDetailTable" class="DetailContentTable" style="text-align:center;">
+                            <thead style="vertical-align: bottom;">
+                                <tr style="text-decoration:underline;">
+                                    <th></th>
+                                    <th>Medication</th>
+                                    <th>Unit</th>
+                                    <th>SingleDose</th>
+                                    <th>Route</th>
+                                    <th>Freq.</th>
+                                    <!--<th>Indic.</th>-->
+                                    <!--<th>DailyDose</th>-->
+                                    <th>Days</th>
+                                    <th>Qty.</th>
+                                </tr>
+                            </thead>
+                            <tbody style="vertical-align:top;">
+                                @for (int j = 0; j < MedOrder.Count(); j++)
+                                {
+                                    <tr>
+                                        <td>@(j + 1).</td>
+                                        <td style="white-space:normal;">@MedOrder[j].PlanDes</td>
+                                        <td style="text-align:center;">@MedOrder[j].UnitDose</td>
+                                        <td style="text-align:center;">@MedOrder[j].QtyDose</td>
+                                        <td style="white-space:normal;">@MedOrder[j].DosePath</td>
+                                        <td style="text-align:center;">@MedOrder[j].FreqCode</td>
+                                        <!--<td>@MedOrder[j].DoseIndication</td>-->
+                                        <!--<td>@MedOrder[j].QtyDaily</td>-->
+                                        <td style="text-align:center;">@MedOrder[j].PlanDays</td>
+                                        <td style="text-align:center;">@MedOrder[j].TotalQty</td>
+                                    </tr>
+                                    @if (!string.IsNullOrWhiteSpace(MedOrder[j].Remark))
+                                    {
+                                        <tr>
+                                            <td></td>
+                                            <td colspan="7">
+                                                Remarks：@MedOrder[j].Remark
+                                            </td>
+                                        </tr>
+                                    }
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="7">
+                                            <hr style="margin:0px; border-style:dashed; border-color:#ccc;" />
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <div class="footer-space"></div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

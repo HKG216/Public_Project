@@ -1,0 +1,71 @@
+﻿@model KMU.HisOrder.MVC.Areas.HisOrder.ViewModels.PrintClass
+@using KMU.HisOrder.MVC.Models
+
+@{
+    Model.FormTitle = "★★ Emergency Laboratory Request Form ★★";
+    List<Hisorderplan> IcdOrder = Model.OrderData.Where(c => c.HplanType == "ICD").ToList();
+    List<Hisorderplan> LabOrder = Model.OrderData.Where(c => c.HplanType == "Lab").ToList();
+}
+
+<div id="LaboratoryPage" class="page">
+    <table class="PageContainerTable">
+        <thead>
+            <tr>
+                <td style="text-align:center;">
+                    <h2 class="PageFormTitle">@Model.FormTitle</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="header-space"></div>
+                </td>
+            </tr>
+        </thead>
+        <tbody style="vertical-align: top;">
+            <tr>
+                <td>
+                    <div class="PageContent">
+                        @if (IcdOrder.Count() > 0)
+                        {
+                            <h3 style="font-style:italic;">※ Diagnosis</h3>
+                            @for (int i = 0; i < IcdOrder.Count(); i++)
+                            {
+                                <span>@(i + 1). @IcdOrder[i].PlanCode @IcdOrder[i].PlanDes</span>
+                                <br />
+                            }
+                            <h3 style="font-style:italic;">※ Medical Category Item</h3>
+                            <table id="ERLabDetailTable" class="DetailContentTable">
+                                <thead>
+                                    <tr style="text-decoration:underline;">
+                                        <th></th>
+                                        <th>ItemName</th>
+                                        <th>Code</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for (int j = 0; j < LabOrder.Count(); j++)
+                                    {
+                                        <tr>
+                                            <td style="width:20px; max-width:20px">@(j + 1).</td>
+                                            <td style="width:390px; max-width:390px;">@LabOrder[j].PlanDes</td>
+                                            <td>@LabOrder[j].PlanCode</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <hr style="border-style:dashed;" />
+                            <h2>★` Location：@LabOrder.Select(c=>c.LocationCode).FirstOrDefault()</h2>
+                        }
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <div class="footer-space"></div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

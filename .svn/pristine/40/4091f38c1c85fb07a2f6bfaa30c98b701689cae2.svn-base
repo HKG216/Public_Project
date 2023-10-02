@@ -1,0 +1,103 @@
+﻿@model KMU.HisOrder.MVC.Models.KmuIcd
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewData["Title"] = "Create";
+}
+
+ <link href="~/css/style.css" rel="stylesheet" />
+<h4>&nbsp;&nbsp;&nbsp;ICD</h4>
+<h2>&nbsp;&nbsp;&nbsp;Create</h2>
+<hr />
+<div >
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                        @*<label asp-for="IcdCode" class="control-label"></label>*@
+                    ICD10
+                    <input asp-for="IcdCode" class="form-control" required="" style="width:100px" />
+                    <span asp-validation-for="IcdCode" class="text-danger"></span>
+                    <font color="red">@ViewData["Msg"]</font>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    NAME
+                        @*<label asp-for="IcdEnglishName" class="control-label"></label>*@
+                    <input asp-for="IcdEnglishName" class="form-control" required="" style="width:330px" />
+                    <span asp-validation-for="IcdEnglishName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="ParentCode" class="control-label"></label>
+                    <input asp-for="ParentCode" class="form-control" style="width:215px" />
+                    <span asp-validation-for="ParentCode" class="text-danger"></span>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    @Html.Label("Type")
+                    @*<label asp-for="IcdType" class="control-label"></label>*@
+                    <input asp-for="IcdType" class="form-control" required="" style="width:215px" />
+                    <span asp-validation-for="IcdType" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    <label asp-for="ShowMode" class="control-label"></label>
+                    <select asp-for="ShowMode" class="form-control" required="" style="width:140px">
+                        <option value="Right">Right</option>
+                        <option value="Left">Left</option>
+                    </select>
+                    <span asp-validation-for="ShowMode" class="text-danger"></span>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    <label asp-for="Versioncode" class="control-label"></label>
+                    <select asp-for="Versioncode" class="form-control" required="" style="width:140px">
+                        <option value="10">10</option>
+                    </select>
+                    <span asp-validation-for="Versioncode" class="text-danger"></span>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    @*<label asp-for="Status" class="control-label"></label>*@
+                    @Html.Label("Off/On")
+                    <select asp-for="Status" class="form-control" required="" style="width:140px">
+                        <option value="1">True</option>
+                        <option value="2">False</option>
+                    </select>
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>
+            </div>         
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    <label asp-for="Dhis2Code" class="control-label"></label>
+                    <input asp-for="Dhis2Code" class="form-control" required="" style="width:450px" />
+                    <span asp-validation-for="Dhis2Code" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="submit" value="Create" class="btn btn-default" />&nbsp;&nbsp;&nbsp;<a asp-action="Index">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+ 
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 

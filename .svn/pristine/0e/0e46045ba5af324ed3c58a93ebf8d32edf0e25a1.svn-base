@@ -1,0 +1,30 @@
+{
+  "ConnectionStrings": {
+    // SQL Server
+    //"DefaultConnection": "U2VydmVyPTE3Mi4xOC4xOC42NVxcU09NQUxJTEFORCwxNDMzO0RhdGFiYXNlPUtNVTsgVXNlciBJRD1oaXN1c2VyO1Bhc3N3b3JkPUttdWhAJF47Q29ubmVjdCBUaW1lb3V0PTMwO0VuY3J5cHQ9RmFsc2U7VHJ1c3RTZXJ2ZXJDZXJ0aWZpY2F0ZT1GYWxzZTtBcHBsaWNhdGlvbkludGVudD1SZWFkV3JpdGU7TXVsdGlTdWJuZXRGYWlsb3Zlcj1GYWxzZQ=="
+
+    // Windows Server PostgreSQL
+    //"DefaultConnection": "U2VydmVyPTE3Mi4xOC4xOC42NTtEYXRhYmFzZT1LTVU7UG9ydD01NDMyO1VzZXIgSUQ9aGlzdXNlcjtQYXNzd29yZD1LbXVoQCRe"
+
+    // Linux PostgreSQL
+    "DefaultConnection": "W68JBZ8lVn4o7GP0yuLtb0p2TpwrriGMQe14vCUyKcwxvWsgBj89fpN0txB3M6ZcvPsChiK+whldPzJ3/QZ1onUEhLQ88TT3QGXubv/L0w3rnlBwrGXjsgTdtueoC/p8DuJwFfv9T1RxrIu1C/JqDRv3mNc6M/AjulvT4qyjy8XDqAtO9uRJCH6ztBx8ktLkNFMxP0jRu7QaxCtaY27GKw=="//AES256//"U2VydmVyPTE3Mi4xOC4xOC43ODtEYXRhYmFzZT1LTVU7UG9ydD01NDMyO1VzZXIgSUQ9aGlzdXNlcjtQYXNzd29yZD1LbXVoQCRe"//Base64
+	
+	,"EncryptionType":"AES256" //加密類型
+	,"Key": "私立高雄醫學大學附設中和紀念醫院"//"我是金鑰請輸入十六個字因為32Byte" //加密金鑰(32 Byte)
+	,"IV":"中和小港大同旗津" //初始向量(Initial Vector, iv) 類似雜湊演算法中的加密鹽(16 Byte)
+
+
+  },
+  "WebsiteSettings":{
+	  "HtmlTitle": "HIS SYSTEM" //網頁標題列文字
+      ,"SystemTitle": "Somaliland Health Information System (HIS)"//計畫名稱：索馬利蘭醫療資訊管理效能提升計畫  //網頁上方橫幅顯示文字
+  },
+  "https_port": 443,
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

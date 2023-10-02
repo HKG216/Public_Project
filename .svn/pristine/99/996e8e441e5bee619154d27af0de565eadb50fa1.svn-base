@@ -1,0 +1,188 @@
+﻿@model KMU.HisOrder.MVC.Areas.Maintenance.ViewModels.ScheduleData
+@using KMU.HisOrder.MVC.Models;
+@using KMU.HisOrder.MVC.Extesion;
+@using Newtonsoft.Json
+@{
+    var Action = ViewData["Action"] as EnumClass.ActionCode?;
+    var empLists = ViewData["empLists"] as List<string>;
+    var dptLists = ViewData["dptLists"] as List<string>;
+    DayOfWeek DayOfWeek = DateTime.Today.DayOfWeek;
+    if (Model != null && !string.IsNullOrEmpty(Model.SCHE_WEEK))
+    {
+        @foreach (DayOfWeek week in Enum.GetValues(typeof(DayOfWeek)))
+        {
+            if (Model.SCHE_WEEK == week.ToString("d"))
+            {
+                DayOfWeek = week;
+            }
+        }
+    }
+
+    var JsonEmp = JsonConvert.SerializeObject(empLists);
+    var JsonDpt = JsonConvert.SerializeObject(dptLists);
+}
+<style>
+    .ui-autocomplete {
+        position: absolute;
+        cursor: default;
+        z-index: 9999 !important;
+    }
+</style>
+
+<div class="form-group row mx-0 mb-0">
+    <!--Week-->
+    <div class="col-4" style="display:block">
+        <label class="form-control font-weight-bold border-0 px-0 mb-0 align-self-end" style="background-color:inherit;font-size:16px">&nbsp;Week:</label>
+        <select id="SelectModalWeek" class="form-control font-weight-bold text-primary">
+            @foreach (DayOfWeek week in Enum.GetValues(typeof(DayOfWeek)))
+            {
+                if (DayOfWeek == week)
+                {
+                    <option value="@week.ToString("d")" selected>@week.EnumToString()</option>
+                }
+                else
+                {
+                    <option value="@week.ToString("d")">@week.EnumToString()</option>
+                }
+            }
+        </select>
+    </div>
+    <!--Noon-->
+    <div class="col-4" style="display:none">
+        <label class="form-control col-lg-12 font-weight-bold border-0 px-0 mb-0 align-self-end" style="background-color:inherit;font-size:16px">&nbsp;Noon:</label>
+        <select id="SelectModalNoon" class="form-control col-lg-12 font-weight-bold text-primary">
+            @foreach (EnumClass.EnumNoon noon in Enum.GetValues(typeof(EnumClass.EnumNoon)))
+            {
+                if (Model.SCHE_NOON != null && Model.SCHE_NOON == noon.EnumToCode())
+                {
+                    <option value="@noon.EnumToCode()" selected>@noon.EnumToString()</option>
+                }
+                else
+                {
+                    <option value="@noon.EnumToCode()">@noon.EnumToString()</option>
+                }
+            }
+        </select>
+    </div>
+    <!--Room-->
+    <div class="col-4" style="display:block">
+        <label class="form-control font-weight-bold border-0 px-0 mb-0 align-self-end" style="background-color:inherit;font-size:16px">&nbsp;Room Code:</label>
+        <input type="text" id="Txt_ModalRoom" class="form-control font-weight-bold text-primary" value="@Model.SCHE_ROOM" />
+    </div>
+
+    <!--On/Off-->
+    <div class="col-4" style="display:block">
+        <label class="form-control font-weight-bold border-0 px-0 mb-0 align-self-end" style="background-color:inherit;font-size:16px">&nbsp;On/Off:</label>
+        @if (Model.DPT_CATEGORY == "EMG")
+        {
+            <select id="Select_ModalFlag" class="form-control col-lg-12 font-weight-bold text-primary" disabled>
+                <option value="@EnumClass.OpenFlag.On.EnumToCode()" selected>@EnumClass.OpenFlag.On.EnumToString()</option>
+            </select>
+        }
+        else
+        {
+            <select id="Select_ModalFlag" class="form-control col-lg-12 font-weight-bold text-primary">
+                @foreach (EnumClass.OpenFlag flag in Enum.GetValues(typeof(EnumClass.OpenFlag)))
+                {
+                    if (flag == Model.enumOpenFlag)
+                    {
+                        <option value="@flag.EnumToCode()" selected>@flag.EnumToString()</option>
+                    }
+                    else
+                    {
+                        <option value="@flag.EnumToCode()">@flag.EnumToString()</option>
+                    }
+                }
+            </select>
+        }
+    </div>
+    <!--Department-->
+    <div class="col-6" style="display:block">
+        <label class="form-control font-weight-bold border-0 px-0 mb-0 align-self-end" style="background-color:inherit;font-size:16px">&nbsp;Department:</label>
+        <input type="text" id="Txt_ModalDpt" class="form-control col-lg-4 font-weight-bold text-primary" placeholder="Department" value="@Model.SCHE_DPT" />
+        <input type="text" id="Txt_ModalDptName" class="form-control col-lg-8 font-weight-bold text-primary" placeholder="Type Department left side" readonly value="@Model.SCHE_DPT_NAME" />
+    </div>
+    <!--Doctor-->
+    <div class="col-6" style="display:block">
+        <label class="form-control font-weight-bold border-0 px-0 mb-0 align-self-end" style="background-color:inherit;font-size:16px">&nbsp;Doctor:</label>
+        <input type="text" id="Txt_ModalDoctor" class="form-control col-lg-4 font-weight-bold text-primary" placeholder="Doctor" value="@Model.SCHE_DOCTOR_CODE" />
+        <input type="text" id="Txt_ModalDoctorName" class="form-control col-lg-8 font-weight-bold text-primary" placeholder="Type Doctor Code left side" readonly value="@Model.SCHE_DOCTOR_NAME" />
+        <ejs-autocomplete id="games" dataSource="empLists"></ejs-autocomplete>
+    </div>
+    <!--Remark-->
+    <div class="col-12" style="display:block">
+        <label class="form-control font-weight-bold border-0 px-0 mb-0 align-self-end" style="background-color:inherit;font-size:16px">&nbsp;Remark:</label>
+        <textarea id="Txt_ModalRemark" class="form-control font-weight-bold">@Model.REMARK</textarea>
+    </div>
+</div>
+<br />
+<div class="form-group row mx-0 mb-0 justify-content-center">
+    @if (EnumClass.ActionCode.Create == Action)
+    {
+        <button type="button" class="btn btn-outline-success col-lg-5" onclick="fn_ModifyScheduleData()">Create</button>
+    }
+    else
+    {
+        <button type="button" class="btn btn-outline-danger col-lg-5" onclick="fn_ModifyScheduleData()">Update</button>
+    }
+
+</div>
+<script>
+
+    var EmpInfo = [];
+    EmpInfo = JSON.parse('@Html.Raw(JsonEmp)');
+
+    var DeptInfo = [];
+    DeptInfo = JSON.parse('@Html.Raw(JsonDpt)');
+
+
+
+    $("#Txt_ModalDpt").autocomplete({
+        source: function (request, response) {
+            var result = $.ui.autocomplete.filter(DeptInfo, request.term),
+                startsWithMatcher = new RegExp("^" + request.term, "i"),
+                startsWith = $.grep(DeptInfo, function (value) {
+                    return startsWithMatcher.test(value.label || value.value || value);
+                }),
+                containsMatcher = new RegExp(request.term, "i"),
+                contains = $.grep(DeptInfo, function (value) {
+                    return $.inArray(value, startsWith) < 0 &&
+                        containsMatcher.test(value.label || value.value || value);
+                });
+            response(startsWith.concat(contains).slice(0, 15));
+        },
+        select: function (event, ui) {
+            var key = ui.item.value;
+            this.value = key;
+            var set = key.split('-');
+            this.value = set[0];
+            $('#Txt_ModalDptName').val(set[1]);
+            return false;
+        }
+    })
+
+    $("#Txt_ModalDoctor").autocomplete({
+        source: function (request, response) {
+            var result = $.ui.autocomplete.filter(EmpInfo, request.term),
+                startsWithMatcher = new RegExp("^" + request.term, "i"),
+                startsWith = $.grep(EmpInfo, function (value) {
+                    return startsWithMatcher.test(value.label || value.value || value);
+                }),
+                containsMatcher = new RegExp(request.term, "i"),
+                contains = $.grep(EmpInfo, function (value) {
+                    return $.inArray(value, startsWith) < 0 &&
+                        containsMatcher.test(value.label || value.value || value);
+                });
+            response(startsWith.concat(contains).slice(0, 15));
+        },
+        select: function (event, ui) {
+            var key = ui.item.value;
+            this.value = key;
+            var set = key.split('-');
+            this.value = set[0];
+            $('#Txt_ModalDoctorName').val(set[1]);
+            return false;
+        }
+    })
+
+</script>

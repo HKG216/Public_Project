@@ -1,0 +1,253 @@
+﻿using KMU.HisOrder.MVC.Areas.HisOrder.Models;
+using KMU.HisOrder.MVC.Areas.HisOrder.ViewModels;
+using KMU.HisOrder.MVC.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Data;
+using System.Drawing;
+using System.Net;
+using System.Net.NetworkInformation;
+using System.Text.RegularExpressions;
+using System.Xml.Linq;
+
+namespace KMU.HisOrder.MVC.Areas.HisOrder.Controllers
+{
+    [Area("HisOrder")]
+    [Authorize(Roles = "HisOrder")]//登入後可依據設定的 專案名稱 project_id 作為判斷依據
+    public class PrintController : Controller
+    {
+        private readonly KMUContext _context;
+        private PrintClass GlobalPrintData = new PrintClass();
+
+        public PrintController(KMUContext context)
+        {
+            _context = context;
+        }
+
+        private void SetGlobalPrintData()
+        {
+            try
+            {
+                using (HisOrderController col = new HisOrderController(_context))
+                {
+                    GlobalVariableDTO grv = col.getGlobalVariablDTO(HttpContext);
+
+                    // Set the print data.
+                    GlobalPrintData.HospName = _context.KmuCoderefs.Where(c => c.RefCodetype == "HospitalCode").Select(c => c.RefName).FirstOrDefault().ToString();
+                    GlobalPrintData.GlobalVariable = grv;
+                    GlobalPrintData.OrderData = _context.Hisorderplans.Where(c => c.Inhospid == grv.Patient.Inhospid && (c.Status == '0' || c.Status == '2') && c.DcDate == null).OrderBy(c => c.SeqNo).ToList();
+
+                    List<KmuMedpathway> DosePathData = _context.KmuMedpathways.ToList();
+
+                    foreach (Hisorderplan item in GlobalPrintData.OrderData)
+                    {
+                        item.DosePath = DosePathData.Where(c => c.PathCode == item.DosePath).Select(c => c.PathDesc).FirstOrDefault();
+                    }
+
+                    List<Hisordersoa> Soalist = _context.Hisordersoas.Where(c => c.Inhospid == grv.Patient.Inhospid && (grv.Clinic.InhospType == "OPD" ? c.SourceType == "OPD" : c.SourceType == "EMG")).OrderBy(c => c.VersionCode).ToList();
+                    int VersionCount = Soalist.GroupBy(c => c.VersionCode).Count();
+                    string ShowFontStyle = _context.KmuCoderefs.Where(c => c.RefCodetype == "PrintMedicalStyle").Select(c => c.RefCode).FirstOrDefault();
+
+                    GlobalPrintData.Ordersoa = new List<PrintHisordersoa>();
+                    for (int i = 0; i < VersionCount; i++)
+                    {
+                        PrintHisordersoa Ordersoa = new PrintHisordersoa();
+                        Ordersoa.ClinicRemarks = Soalist.Where(c => c.Kind == "CM" && c.VersionCode == i + 1).Select(c => c.Context).LastOrDefault();
+                        Ordersoa.ClinicRemarks = Ordersoa.ClinicRemarks ?? "";
+                        Ordersoa.Management = Soalist.Where(c => c.Kind == "MG" && c.VersionCode == i + 1).Select(c => c.Context).LastOrDefault();
+                        Ordersoa.Management = Ordersoa.Management ?? "";
+                        Ordersoa.Transfer = _context.Registrations.Where(c => c.Inhospid == grv.Patient.Inhospid && c.RegFollowCode == "*").Select(c => c.RegFollowDesc).FirstOrDefault();
+                        Ordersoa.Version = (i + 1).ToString();
+                        Ordersoa.CreateDate = Soalist.Where(c => c.VersionCode == i + 1).Select(c => c.CreateDate).FirstOrDefault();
+
+                        if (ShowFontStyle != "Y")
+                        {
+                            // Decode html tag
+                            // GlobalPrintData.ClinicRemarks = WebUtility.HtmlDecode(GlobalPrintData.ClinicRemarks);
+                            // GlobalPrintData.Management = WebUtility.HtmlDecode(GlobalPrintData.Management);
+                            //GlobalPrintData.ClinicRemarks = Regex.Replace(GlobalPrintData.ClinicRemarks, @"<(.|\n)*?>", string.Empty);
+                            //GlobalPrintData.Management = Regex.Replace(GlobalPrintData.Management, @"<(.|\n)*?>", string.Empty);
+                            //GlobalPrintData.ClinicRemarks = Regex.Replace(GlobalPrintData.ClinicRemarks, @"<[^>]+>|&nbsp;", string.Empty);
+                            //GlobalPrintData.Management = Regex.Replace(GlobalPrintData.Management, @"<[^>]+>|&nbsp;", string.Empty);
+
+                            // Remove text style
+                            Ordersoa.ClinicRemarks = Regex.Replace(Ordersoa.ClinicRemarks, @"<.*?>", string.Empty);
+                            Ordersoa.Management = Regex.Replace(Ordersoa.Management, @"<.*?>", string.Empty);
+                        }
+
+                        Ordersoa.ClinicRemarks = Ordersoa.ClinicRemarks.Replace("\n\n", "\n");
+                        Ordersoa.Management = Ordersoa.Management.Replace("\n\n", "\n");
+
+
+                        GlobalPrintData.Ordersoa.Add(Ordersoa);
+                    }
+
+                    ViewData["Title"] = grv.Clinic.RegDate.ToString() + "_" + grv.Clinic.DeptName + "_" + grv.Patient.RegPatientId;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public PartialViewResult PrintForm(string inStatus)
+        {
+            ResultDTO result = new ResultDTO() { isSuccess = false };
+
+            try
+            {
+                SetGlobalPrintData();
+
+                // Display or not the print page nodes.
+                GlobalPrintData.ShowPrint = new List<string>();
+                CheckBeforePrint_MedicalRecord(GlobalPrintData, inStatus);
+                CheckBeforePrint_Prescription(GlobalPrintData, inStatus);
+                CheckBeforePrint_Laboratory(GlobalPrintData, inStatus);
+                CheckBeforePrint_LaboratoryER(GlobalPrintData, inStatus);
+                CheckBeforePrint_Examination(GlobalPrintData, inStatus);
+                CheckBeforePrint_Pathology(GlobalPrintData, inStatus);
+
+                result.isSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                result.isSuccess = false;
+
+                ViewData["ErrorMessage"] = "Order print error：" + ex.ToString();
+                return PartialView("Views/Shared/ErrorPage.cshtml");
+            }
+
+            return PartialView("Areas/HisOrder/Views/Print/_PrintMenu.cshtml", GlobalPrintData);
+        }
+
+        public ActionResult generateOrderPrint(string inPages)
+        {
+            SetGlobalPrintData();
+
+            GlobalPrintData.ShowPrint = inPages.Split(",").ToList();
+
+            return PartialView("Areas/HisOrder/Views/Print/_PrintTemplate.cshtml", GlobalPrintData);
+        }
+
+        private void CheckBeforePrint_MedicalRecord(PrintClass inPrintData, string inStatus)
+        {
+            if (inStatus != "confirm") { return; }
+
+            bool isPrint = false;
+
+            if (inPrintData.OrderData.Where(c => c.HplanType == "ICD").Count() > 0)
+            {
+                isPrint = true;
+            }
+
+            if (inPrintData.Ordersoa != null && inPrintData.Ordersoa.Count > 0)
+            {
+                isPrint = true;
+            }
+
+            //if (!string.IsNullOrWhiteSpace(inPrintData.ClinicRemarks))
+            //{
+            //    isPrint = true;
+            //}
+
+            //if (!string.IsNullOrWhiteSpace(inPrintData.Management))
+            //{
+            //    isPrint = true;
+            //}
+
+            if (isPrint == true)
+            {
+                inPrintData.ShowPrint.Add("MedicalRecord");
+            }
+        }
+
+        private void CheckBeforePrint_Prescription(PrintClass inPrintData, string inStatus)
+        {
+            if (inStatus != "confirm") { return; }
+
+            bool isPrint = false;
+
+            if (inPrintData.OrderData.Where(c => c.HplanType == "Med").Count() > 0)
+            {
+                isPrint = true;
+            }
+
+            if (isPrint == true)
+            {
+                inPrintData.ShowPrint.Add("Prescription");
+            }
+        }
+
+        private void CheckBeforePrint_Laboratory(PrintClass inPrintData, string inStatus)
+        {
+            if (inStatus != "confirm" && inStatus != null) { return; }
+
+            bool isPrint = false;
+
+            if (inPrintData.OrderData.Where(c => c.HplanType == "Lab").Count() > 0)
+            {
+                isPrint = true;
+            }
+
+            if (isPrint == true)
+            {
+                inPrintData.ShowPrint.Add("Laboratory");
+            }
+        }
+
+        private void CheckBeforePrint_LaboratoryER(PrintClass inPrintData, string inStatus)
+        {
+            if (inStatus != "confirm" && inStatus != null) { return; }
+
+            bool isPrint = false;
+
+            if (inPrintData.OrderData.Where(c => c.HplanType == "Lab").Count() > 0)
+            {
+                isPrint = true;
+            }
+
+            if (isPrint == true)
+            {
+                inPrintData.ShowPrint.Add("Emergency Laboratory");
+            }
+        }
+
+        private void CheckBeforePrint_Examination(PrintClass inPrintData, string inStatus)
+        {
+            if (inStatus != "confirm" && inStatus != null) { return; }
+
+            bool isPrint = false;
+
+            if (inPrintData.OrderData.Where(c => c.HplanType == "Exam").Count() > 0)
+            {
+                isPrint = true;
+            }
+
+            if (isPrint == true)
+            {
+                inPrintData.ShowPrint.Add("Radiology");
+            }
+        }
+
+        private void CheckBeforePrint_Pathology(PrintClass inPrintData, string inStatus)
+        {
+            if (inStatus != "confirm" && inStatus != null) { return; }
+
+            bool isPrint = false;
+
+            if (inPrintData.OrderData.Where(c => c.HplanType == "Path").Count() > 0)
+            {
+                isPrint = true;
+            }
+
+            if (isPrint == true)
+            {
+                inPrintData.ShowPrint.Add("Pathology");
+            }
+        }
+    }
+}

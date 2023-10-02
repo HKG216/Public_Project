@@ -1,0 +1,118 @@
+﻿
+@page {
+    size: A5 portrait;
+    margin: 0; /* Chrome print option set default no margin */
+    /*width: 148mm;*/
+    /*height: 210mm;*/
+    /* width = 559.37px */
+    /* height = 793.7px */
+}
+
+@media print {
+    body {
+        visibility: visible !important;
+    }
+}
+
+body {
+    visibility: hidden; /* Hide preview print */
+}
+
+pre {
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    margin: 0px;
+    white-space: pre-wrap;
+    line-height:1.5;
+}
+
+pre div{
+    display:unset;
+}
+
+h2, h3, h4 {
+    font-weight: bold;
+    margin: 5px 0px;
+}
+
+.page {
+    page-break-inside: avoid; /* Avoid break page block */
+    page-break-after: always; /* Break page after */
+}
+
+    .page:last-of-type {
+        page-break-after: avoid; /* last page don't break */
+    }
+
+.page-border {
+    border: 2px solid #777;
+    width: 137mm;
+    height: 95%;
+    position: fixed;
+    top: 0;
+    margin: 5mm; /* the same .page margin */
+}
+
+.header {
+    position: fixed;
+    width: 130mm;
+    top: 0;
+    font-size: 1rem;
+}
+
+.header, .header-space {
+    height: 40px; /* Main header height maintenance */
+    margin: 6mm 10mm 5mm 10mm;
+}
+
+.footer {
+    position: fixed;
+    width: 130mm;
+    bottom: 0;
+    font-size: 1rem;
+    margin: 0mm 5mm 0mm 10mm; /* the same .page margin */
+}
+
+.footer, .footer-space {
+    height: 105px; /* Main footer height maintenance */
+}
+
+.PageContainerTable {
+    width: 560px;
+}
+
+.PageFormTitle {
+    margin-top: 55px; /* Form Tilte Position */
+    /* If the position is modified, you need to adjust the following as a whole */
+    /* 1. the header and header-space height and margin */
+    /* 2. javascript DynamicChangeHeight() */
+}
+
+.PageContent {
+    margin: 0px 35px;
+}
+
+.DetailContentTable {
+    width: 100%;
+    text-align: left;
+}
+
+#MedDetailTable > tbody > tr > td,
+#LabDetailTable > tbody > tr > td {
+    text-overflow: ellipsis;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/**/
+
+.PageContentPsl {
+    margin: 35px 35px;
+}
+
+
+.PageContentRSheet {
+    margin: 50px 0px;
+}

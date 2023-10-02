@@ -1,0 +1,111 @@
+﻿@model KMU.HisOrder.MVC.Models.KmuNonMedicine
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Edit";
+}
+<link href="~/css/style.css" rel="stylesheet" />
+<h2>&nbsp;&nbsp;&nbsp;Edit</h2>
+
+<h4>&nbsp;&nbsp;&nbsp;NonMedicine</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ItemId" />
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    @*<label asp-for="ItemName" class="control-label"></label>*@
+                    Name
+                    <input asp-for="ItemName" class="form-control" style="width:490px" />
+                    <span asp-validation-for="ItemName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <font color="red">*</font>
+                    @*<label asp-for="ItemType" class="control-label"></label>*@
+                    Type
+                    <input asp-for="ItemType" class="form-control" style="width:240px" />
+                    <span asp-validation-for="ItemType" class="text-danger"></span>
+                </div>&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    @*<label asp-for="ItemSpec" class="control-label"></label>*@
+                    Spec
+                    <input asp-for="ItemSpec" class="form-control" style="width:240px" />
+                    <span asp-validation-for="ItemSpec" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="StartDate" class="control-label"></label>
+                    <input asp-for="StartDate" class="form-control" />
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                </div>&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="EndDate" class="control-label"></label>
+                    <input asp-for="EndDate" class="form-control" />
+                    <span asp-validation-for="EndDate" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="Status" class="control-label"></label>
+                    <select asp-for="Status" class="form-control" required="" style="width:240px">
+                        <option value="1">True</option>
+                        <option value="2">False</option>
+                    </select>
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="CreateUser" class="control-label"></label>
+                    <input asp-for="CreateUser" class="form-control" readonly="readonly" style="width:240px" />
+                    <span asp-validation-for="CreateUser" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label asp-for="Remark" class="control-label"></label>
+                    <input asp-for="Remark" class="form-control" style="width:490px" />
+                    <span asp-validation-for="Remark" class="text-danger"></span>
+                </div>
+            </div>
+            @*            <div class="form-group">
+            <label asp-for="CreateDate" class="control-label"></label>
+            <input asp-for="CreateDate" class="form-control" />
+            <span asp-validation-for="CreateDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+            <label asp-for="ModifyUser" class="control-label"></label>
+            <input asp-for="ModifyUser" class="form-control" />
+            <span asp-validation-for="ModifyUser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+            <label asp-for="ModifyDate" class="control-label"></label>
+            <input asp-for="ModifyDate" class="form-control" />
+            <span asp-validation-for="ModifyDate" class="text-danger"></span>
+            </div>*@
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-default" />&nbsp;&nbsp;&nbsp;<a asp-action="Index">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
